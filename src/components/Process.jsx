@@ -13,7 +13,7 @@ export default function Process() {
       <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-6">
         // How I Work
       </p>
-      <h2 className="text-[60px] font-bold tracking-tightest uppercase mb-16">OUR PROCESS</h2>
+      <h2 className="text-[60px] font-bold tracking-tightest uppercase mb-16">MY PROCESS</h2>
 
       <div className="grid grid-cols-3 gap-5">
         {steps.map(({ n, title, desc }) => (

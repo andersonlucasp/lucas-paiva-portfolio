@@ -13,8 +13,12 @@ body { background: #0b0b0b; color: #fff; font-family: 'Space Grotesk', sans-seri
 .photo { background-size: cover; background-position: center; }
 
 /* Navbar */
-#navbar { transition: background 0.3s; }
-#navbar.scrolled { background: rgba(11,11,11,0.92); backdrop-filter: blur(12px); }
+#navbar { transition: background 0.6s ease, backdrop-filter 0.6s ease, border-color 0.6s ease; }
+#navbar.scrolled {
+  background: rgba(11,11,11,0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
 
 /* Hero */
 .hero-img {
@@ -37,9 +41,6 @@ body { background: #0b0b0b; color: #fff; font-family: 'Space Grotesk', sans-seri
 .thumb-3 { background-image: url('/img/thumb-3.jpg'); }
 .thumb-4 { background-image: url('/img/thumb-4.jpg'); }
 
-/* About photos */
-.about-photo-1 { background-image: url('/img/about-1.jpg'); }
-.about-photo-2 { background-image: url('/img/about-2.jpg'); }
 
 /* Specialties */
 .spec-img {
@@ -57,7 +58,7 @@ body { background: #0b0b0b; color: #fff; font-family: 'Space Grotesk', sans-seri
 .test-photo-1 { background-image: url('/img/testimonial-1.jpg'); }
 .test-photo-2 { background-image: url('/img/testimonial-2.jpg'); }
 .test-photo-3 { background-image: url('/img/testimonial-3.jpg'); }
-.test-photo-4 { background-image: url('/img/testimonial-4.jpg'); }
+.test-photo-4 { background-image: url('/img/testimonial-4.png'); }
 
 /* Ticker */
 .ticker-wrap { overflow: hidden; }

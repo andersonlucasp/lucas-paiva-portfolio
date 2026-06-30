@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: 'How do we start working together?',
-    a: "Book a free 30-minute discovery call via the form below or email me directly. We'll align on goals, scope, and next steps before anything is signed.",
+    a: "Book a free 30-minute discovery call via the form below or email me directly. I'll align on goals, scope, and next steps before anything is signed.",
   },
 ]
 

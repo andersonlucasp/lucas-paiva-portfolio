@@ -47,10 +47,16 @@ export default function About() {
           </a>
         </div>
 
-        {/* Right: photos */}
-        <div className="flex gap-4 items-start">
-          <div className="about-photo-1 photo w-[46%] aspect-[3/4] rounded-2xl flex-shrink-0" />
-          <div className="about-photo-2 photo w-[54%] aspect-[4/3] rounded-2xl self-end" />
+        {/* Right: video */}
+        <div className="w-full rounded-2xl overflow-hidden aspect-[3/4]">
+          <video
+            src="/video/aboutme.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </section>

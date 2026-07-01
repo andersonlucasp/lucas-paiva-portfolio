@@ -44,9 +44,9 @@ body { background: #0b0b0b; color: #fff; font-family: 'Space Grotesk', sans-seri
 
 /* Specialties */
 .spec-img {
-  background-image: url('/img/specialties-bg.jpg');
+  background-image: url('/img/design-system.png');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
 }
 
 /* Projects */

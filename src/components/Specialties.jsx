@@ -7,27 +7,27 @@ gsap.registerPlugin(ScrollTrigger)
 const items = [
   {
     num: '01',
-    title: ['DESIGN', 'SYSTEM'],
+    title: 'DESIGN SYSTEM',
     desc: 'Scalable, consistent component libraries that unify product teams and accelerate delivery across all touchpoints.',
-    bg: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1440&h=900&fit=crop&q=80',
+    bg: '/img/design-system.png',
   },
   {
     num: '02',
-    title: ['UX / UI', 'DESIGN'],
+    title: 'UX / UI DESIGN',
     desc: 'User-centered experiences grounded in research and strategy — intuitive, purposeful, and built to convert.',
     bg: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=1440&h=900&fit=crop&q=80',
   },
   {
     num: '03',
-    title: ['DESIGN', 'OPS'],
+    title: 'DESIGN OPS',
     desc: 'Operational frameworks that streamline design workflows, tooling, and team collaboration at scale.',
     bg: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1440&h=900&fit=crop&q=80',
   },
   {
     num: '04',
-    title: ['BRAND-', 'ING'],
-    desc: 'Bold visual identities that communicate your values and differentiate your brand in a crowded market.',
-    bg: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1440&h=900&fit=crop&q=80',
+    title: 'SERVICE DESIGN',
+    desc: 'End-to-end service experiences that connect people, processes, and touchpoints — making complex journeys feel effortless.',
+    bg: '/img/thumb-4.jpg',
   },
 ]
 
@@ -79,14 +79,15 @@ export default function Specialties() {
         },
       })
 
-      // Wrapper sobe continuamente — todos os cards sobem juntos com o scroll
+      // Wrapper sobe items.length * VH no total — todos os 4 cards entram e saem
+      // pelo topo com o mesmo padrão contínuo, incluindo o card 04
       tl.to(cardWrapperRef.current, {
-        y: -N * VH,
+        y: -items.length * VH,
         ease: 'none',
-        duration: N,
+        duration: items.length,
       })
 
-      // Títulos e BG trocam exatamente quando o próximo card chega à posição natural
+      // Títulos e BG trocam quando o próximo card chega à posição natural (t = 1, 2, 3)
       for (let i = 1; i <= N; i++) {
         tl
           .to(titleRefs.current[i - 1], { opacity: 0, y: -50, ease: 'none', duration: 0.25 }, i - 0.12)
@@ -96,16 +97,13 @@ export default function Specialties() {
           .to(barRefs.current[i - 1],   { width: 14, duration: 0.2 }, i - 0.1)
           .to(barRefs.current[i],       { width: 40, duration: 0.2 }, i - 0.1)
       }
-
-      // hold ao final — mantém o último card visível antes da próxima seção entrar
-      tl.to({}, { duration: 2 })
     })
 
     return () => ctx.revert()
   }, [])
 
   return (
-    <section ref={sectionRef} style={{ height: `${items.length * 175}vh` }}>
+    <section ref={sectionRef} style={{ height: `${items.length * 200}vh` }}>
       <div style={{ position: 'relative', height: '100%' }}>
 
         {/* sticky viewport */}
@@ -135,7 +133,7 @@ export default function Specialties() {
           <div
             ref={cardWrapperRef}
             className="absolute will-change-transform"
-            style={{ bottom: '64px', right: '64px', width: '288px', zIndex: 3 }}
+            style={{ bottom: '64px', right: '64px', width: '480px', zIndex: 3 }}
           >
             {items.map((item, i) => (
               <div
@@ -145,7 +143,7 @@ export default function Specialties() {
                 style={{
                   bottom: 0,
                   right: 0,
-                  width: '288px',
+                  width: '480px',
                   background: 'rgba(255,255,255,0.07)',
                   backdropFilter: 'blur(16px)',
                   WebkitBackdropFilter: 'blur(16px)',
@@ -179,10 +177,8 @@ export default function Specialties() {
                   ref={el => titleRefs.current[i] = el}
                   className="absolute will-change-transform"
                 >
-                  <h2 className="text-[clamp(80px,10vw,140px)] font-bold leading-[0.88] tracking-tightest uppercase">
-                    {item.title[0]}
-                    <br />
-                    {item.title[1]}
+                  <h2 className="text-[clamp(60px,7vw,110px)] font-bold leading-[0.9] tracking-tightest uppercase">
+                    {item.title}
                   </h2>
                 </div>
               ))}

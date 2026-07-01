@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const MEDIUM_RSS = 'https://medium.com/feed/@andersonlucaspaiva'
-const API_URL    = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(MEDIUM_RSS)}`
+const API_URL = '/api/blog'
 
 function readTime(html = '') {
   const words = html.replace(/<[^>]+>/g, '').split(/\s+/).length

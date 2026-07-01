@@ -1,7 +1,7 @@
 const info = [
   { label: 'Email Address', value: 'andersonlucaspz@gmail.com', href: 'mailto:andersonlucaspz@gmail.com' },
-  { label: 'Phone Number', value: '+55 (11) 9 9999-9999' },
-  { label: 'Visit', value: 'São Paulo, Brazil' },
+  { label: 'Phone Number', value: '🇧🇷 +55 (11) 9 9743-7770', href: 'tel:+5511997437770' },
+  { label: 'Visit', value: 'Taubaté - SP, Brazil' },
   { label: 'Working Hours', value: 'Mon – Fri, 9AM – 6PM (BRT)' },
 ]
 

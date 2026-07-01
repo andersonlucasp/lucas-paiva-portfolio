@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <footer className="bg-bg overflow-hidden">
       {/* Top bar */}
-      <div className="px-16 pt-14 pb-8 flex items-center justify-between border-b border-white/[0.08]">
+      <div className="px-16 pb-8 flex items-center justify-between border-b border-white/[0.08]">
         <p className="text-sm text-white/40 max-w-md leading-relaxed">
           Designed to scale with clarity.
           <br />

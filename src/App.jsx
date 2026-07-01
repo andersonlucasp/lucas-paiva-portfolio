@@ -30,9 +30,9 @@ function Home() {
   return (
     <>
       <Hero />
+      <Work />
       <About />
       <Specialties />
-      <Work />
       <Process />
       <Testimonials />
       <FAQ />

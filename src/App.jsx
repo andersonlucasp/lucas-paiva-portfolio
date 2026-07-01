@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -9,9 +10,10 @@ import Testimonials from './components/Testimonials'
 import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import BlogPage from './pages/BlogPage'
+import ArticlePage from './pages/ArticlePage'
 
-export default function App() {
-  // Scroll reveal
+function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -26,8 +28,7 @@ export default function App() {
   }, [])
 
   return (
-    <div className="bg-bg text-white">
-      <Navbar />
+    <>
       <Hero />
       <About />
       <Specialties />
@@ -37,6 +38,21 @@ export default function App() {
       <FAQ />
       <Contact />
       <Footer />
-    </div>
+    </>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <div className="bg-bg text-white">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<ArticlePage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   )
 }

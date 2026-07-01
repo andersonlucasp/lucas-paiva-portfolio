@@ -60,6 +60,31 @@ body { background: #0b0b0b; color: #fff; font-family: 'Space Grotesk', sans-seri
 .test-photo-3 { background-image: url('/img/testimonial-3.jpg'); }
 .test-photo-4 { background-image: url('/img/testimonial-4.png'); }
 
+/* Article body (blog post) */
+.article-body { color: rgba(255,255,255,0.75); font-size: 18px; line-height: 1.8; }
+.article-body h1, .article-body h2, .article-body h3, .article-body h4 {
+  color: #fff; font-weight: 700; letter-spacing: -0.03em; margin: 2em 0 0.6em;
+}
+.article-body h2 { font-size: 1.6em; }
+.article-body h3 { font-size: 1.25em; }
+.article-body h4 { font-size: 1em; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.5); }
+.article-body p { margin: 0 0 1.4em; }
+.article-body a { color: #fff; text-decoration: underline; text-underline-offset: 3px; opacity: 0.7; }
+.article-body a:hover { opacity: 1; }
+.article-body blockquote {
+  border-left: 3px solid rgba(255,255,255,0.2);
+  margin: 2em 0; padding: 0.5em 0 0.5em 1.5em;
+  color: rgba(255,255,255,0.5); font-style: italic;
+}
+.article-body figure { margin: 2em 0; }
+.article-body figure img { width: 100%; border-radius: 12px; }
+.article-body figcaption { text-align: center; font-size: 13px; color: rgba(255,255,255,0.3); margin-top: 0.5em; }
+.article-body img { max-width: 100%; border-radius: 12px; margin: 1.5em 0; }
+.article-body ul, .article-body ol { padding-left: 1.5em; margin: 0 0 1.4em; }
+.article-body li { margin-bottom: 0.4em; }
+.article-body strong { color: #fff; font-weight: 600; }
+.article-body hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 2.5em 0; }
+
 /* Ticker */
 .ticker-wrap { overflow: hidden; }
 .ticker-track { display: flex; gap: 12px; animation: ticker 22s linear infinite; white-space: nowrap; }

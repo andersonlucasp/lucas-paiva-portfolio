@@ -12,7 +12,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const navItems = ['About', 'Work', 'Process', 'Mentoring']
+  const navItems = ['About', 'Work', 'Process']
 
   return (
     <nav
@@ -46,6 +46,16 @@ export default function Navbar() {
           >
             Blog
           </Link>
+        </li>
+        <li>
+          <a
+            href="https://adplist.org/mentors/lucas-paiva-luque"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            Mentoring
+          </a>
         </li>
       </ul>
 

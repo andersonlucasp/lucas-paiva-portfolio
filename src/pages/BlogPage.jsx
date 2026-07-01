@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const API_URL = '/api/blog'
+const FALLBACK_URL = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40andersonlucaspaiva'
 
 function readTime(html = '') {
   const words = html.replace(/<[^>]+>/g, '').split(/\s+/).length
@@ -19,7 +19,7 @@ function articlePath(item) {
   return `/blog/${id}`
 }
 
-function FeaturedCard({ item }) {
+function ListCard({ item, isLast }) {
   const date = new Date(item.pubDate).toLocaleDateString('en-US', {
     year: 'numeric', month: 'long', day: 'numeric',
   })
@@ -29,8 +29,8 @@ function FeaturedCard({ item }) {
     <Link
       to={articlePath(item)}
       state={{ item }}
-      className="group grid grid-cols-2 gap-12 items-center mb-20 pb-20"
-      style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}
+      className="group grid grid-cols-2 gap-12 items-center py-12"
+      style={!isLast ? { borderBottom: '1px solid rgba(255,255,255,0.08)' } : {}}
     >
       {image && (
         <div className="rounded-2xl overflow-hidden aspect-[16/10]">
@@ -47,64 +47,17 @@ function FeaturedCard({ item }) {
             {item.categories[0]}
           </span>
         )}
-        <h2 className="text-[36px] font-bold leading-[1.1] tracking-tightest text-white group-hover:text-white/80 transition-colors">
+        <h2 className="text-[clamp(24px,3vw,36px)] font-bold leading-[1.1] tracking-tightest text-white group-hover:text-white/80 transition-colors">
           {item.title}
         </h2>
-        <p className="text-base text-white/50 leading-relaxed line-clamp-3">
-          {item.description?.replace(/<[^>]+>/g, '').slice(0, 240)}…
-        </p>
-        <div className="flex items-center gap-3 text-xs text-white/30 font-mono mt-2">
+        <div className="flex items-center gap-3 text-xs text-white/30 font-mono">
           <span>{date}</span>
           <span>·</span>
           <span>{readTime(item.content)}</span>
         </div>
-        <span className="text-sm font-medium text-white/40 group-hover:text-white transition-colors mt-1">
+        <span className="text-sm font-medium text-white/40 group-hover:text-white transition-colors">
           Read article →
         </span>
-      </div>
-    </Link>
-  )
-}
-
-function ArticleCard({ item }) {
-  const date = new Date(item.pubDate).toLocaleDateString('en-US', {
-    year: 'numeric', month: 'short', day: 'numeric',
-  })
-  const image = item.thumbnail || extractImage(item.content)
-
-  return (
-    <Link
-      to={articlePath(item)}
-      state={{ item }}
-      className="group flex flex-col rounded-2xl overflow-hidden hover:opacity-80 transition-opacity"
-      style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}
-    >
-      {image && (
-        <div className="w-full aspect-[16/9] overflow-hidden">
-          <img
-            src={image}
-            alt={item.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-          />
-        </div>
-      )}
-      <div className="p-6 flex flex-col gap-3 flex-1">
-        {item.categories?.[0] && (
-          <span className="text-xs font-semibold tracking-[0.12em] uppercase text-white/30">
-            {item.categories[0]}
-          </span>
-        )}
-        <h3 className="text-lg font-bold leading-snug text-white/90 line-clamp-2">
-          {item.title}
-        </h3>
-        <p className="text-sm text-white/45 leading-relaxed line-clamp-3 flex-1">
-          {item.description?.replace(/<[^>]+>/g, '').slice(0, 160)}…
-        </p>
-        <div className="flex items-center gap-2 text-xs text-white/25 font-mono mt-1">
-          <span>{date}</span>
-          <span>·</span>
-          <span>{readTime(item.content)}</span>
-        </div>
       </div>
     </Link>
   )
@@ -132,8 +85,9 @@ export default function BlogPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    fetch(API_URL)
-      .then(r => r.json())
+    fetch('/api/blog')
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .catch(() => fetch(FALLBACK_URL).then(r => r.json()))
       .then(data => {
         if (data.status === 'ok') setArticles(data.items)
         else setError(true)
@@ -141,8 +95,6 @@ export default function BlogPage() {
       .catch(() => setError(true))
       .finally(() => setLoading(false))
   }, [])
-
-  const [featured, ...rest] = articles
 
   return (
     <div className="min-h-screen bg-bg pt-32 pb-24 px-16">
@@ -200,16 +152,11 @@ export default function BlogPage() {
 
       {/* Content */}
       {!loading && !error && (
-        <>
-          {featured && <FeaturedCard item={featured} />}
-          {rest.length > 0 && (
-            <div className="grid grid-cols-3 gap-6">
-              {rest.map(item => (
-                <ArticleCard key={item.guid} item={item} />
-              ))}
-            </div>
-          )}
-        </>
+        <div className="flex flex-col">
+          {articles.map((item, i) => (
+            <ListCard key={item.guid} item={item} isLast={i === articles.length - 1} />
+          ))}
+        </div>
       )}
     </div>
   )

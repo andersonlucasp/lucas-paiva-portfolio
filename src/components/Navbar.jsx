@@ -12,7 +12,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const navItems = ['About', 'Work', 'Process']
+  const navItems = ['Work', 'About', 'Process']
 
   return (
     <nav
@@ -21,11 +21,34 @@ export default function Navbar() {
         scrolled ? 'scrolled' : ''
       }`}
     >
-      <Link to="/" className="text-sm font-bold tracking-[0.12em] uppercase text-white">
+      <a
+        href="/"
+        onClick={e => {
+          if (isHome) {
+            e.preventDefault()
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }
+        }}
+        className="text-sm font-bold tracking-[0.12em] uppercase text-white"
+      >
         Lucas Paiva
-      </Link>
+      </a>
 
       <ul className="flex gap-10 text-sm font-medium text-white/60">
+        <li>
+          <a
+            href="/"
+            onClick={e => {
+              if (isHome) {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }
+            }}
+            className="hover:text-white transition-colors"
+          >
+            Home
+          </a>
+        </li>
         {navItems.map((item) => (
           <li key={item}>
             {isHome ? (

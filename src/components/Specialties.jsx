@@ -165,7 +165,7 @@ export default function Specialties() {
 
           {/* Títulos + header + progress bars */}
           <div
-            className="relative flex flex-col px-16 py-16"
+            className="relative flex flex-col px-16 pt-28 pb-16"
             style={{ height: '100%', zIndex: 2 }}
           >
             <div className="flex justify-between items-center">

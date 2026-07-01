@@ -15,7 +15,7 @@ const projects = [
 
 export default function Work() {
   return (
-    <section id="work" className="relative bg-bg py-24 px-16 overflow-hidden reveal">
+    <section id="work" className="relative bg-bg py-24 px-16 overflow-hidden reveal" style={{ position: 'relative', zIndex: 2 }}>
       {/* Ghost text */}
       <p className="ghost absolute top-10 left-0 text-[clamp(120px,16vw,220px)] font-bold leading-none tracking-tightest uppercase whitespace-nowrap">
         MY WORK

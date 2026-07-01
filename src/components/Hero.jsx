@@ -1,28 +1,49 @@
 export default function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden bg-bg">
-      {/* Main photo */}
-      <div className="hero-img absolute inset-x-6 top-6 bottom-6 rounded-2xl overflow-hidden">
+    <section className="hero-section relative h-screen overflow-hidden bg-bg" style={{ position: 'sticky', top: 0, zIndex: 1, transformOrigin: 'center center' }}>
+
+      {/* Main photo — borda a borda, sem inset */}
+      <div className="hero-img absolute inset-x-3 top-3 bottom-3 rounded-2xl overflow-hidden" style={{ opacity: 0, transform: 'scale(1.15)' }}>
         <div className="hero-overlay absolute inset-0" />
       </div>
 
-      {/* Thumbnail strip — right side */}
-      <div className="absolute right-10 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-10">
-        {['thumb-1', 'thumb-2', 'thumb-3', 'thumb-4'].map((cls) => (
-          <div key={cls} className={`${cls} photo w-[130px] h-[100px] rounded-xl`} />
-        ))}
-      </div>
+      {/* Blur overlay — some durante a animação de entrada */}
+      <div
+        className="hero-overlay-blur absolute inset-x-3 top-3 bottom-3 rounded-2xl z-[1]"
+        style={{ backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}
+      />
 
-      {/* Text overlay — bottom left */}
+      {/* Título — bottom left */}
       <div className="absolute bottom-14 left-16 z-10">
-        <p className="text-sm font-medium text-white/50 tracking-[0.15em] uppercase mb-3">
+        <p
+          className="hero-subtitle text-sm font-medium text-white/50 tracking-[0.15em] uppercase mb-3"
+          style={{ opacity: 0, transform: 'translateY(20px)' }}
+        >
           Senior Product Designer
         </p>
-        <h1 className="text-[clamp(80px,11vw,150px)] font-bold leading-[0.88] tracking-tightest uppercase">
-          LUCAS
-          <br />
-          PAIVA
+        <h1 className="text-[clamp(80px,11vw,142px)] font-bold leading-[0.88] tracking-tightest uppercase">
+          <span className="block overflow-hidden">
+            {'LUCAS'.split('').map((l, i) => (
+              <span key={i} className="hero-title-letter inline-block" style={{ opacity: 0, transform: 'translateY(100%)' }}>
+                {l}
+              </span>
+            ))}
+          </span>
+          <span className="block overflow-hidden">
+            {'PAIVA'.split('').map((l, i) => (
+              <span key={i} className="hero-title-letter inline-block" style={{ opacity: 0, transform: 'translateY(100%)' }}>
+                {l}
+              </span>
+            ))}
+          </span>
         </h1>
+      </div>
+
+      {/* Texto descritivo — bottom right (estilo Xenith) */}
+      <div className="absolute bottom-14 right-16 z-10 max-w-xs text-right">
+        <p className="text-base leading-relaxed text-white/70">
+          //Senior Product Designer at Itaú Unibanco — leading Design Ops and Design System for 40+ business segments across Latin America.
+        </p>
       </div>
 
       {/* Scroll hint */}

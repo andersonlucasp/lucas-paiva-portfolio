@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <nav
       id="navbar"
-      className={`fixed top-0 left-0 right-0 z-50 px-16 py-5 flex items-center justify-between transition-all duration-600 ${
+      className={`fixed top-0 left-0 right-0 z-50 px-16 py-5 flex items-center justify-between transition-all duration-300 ${
         scrolled ? 'scrolled' : ''
       }`}
     >

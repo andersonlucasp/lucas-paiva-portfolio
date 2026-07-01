@@ -34,18 +34,6 @@ export default function Work() {
           </h2>
         </div>
 
-        {/* Got an idea circle */}
-        <a
-          href="#contact"
-          className="w-[160px] h-[160px] rounded-full bg-white flex flex-col items-center justify-center text-bg text-center hover:bg-white/90 transition-colors flex-shrink-0"
-        >
-          <p className="text-base font-bold leading-tight">
-            GOT AN
-            <br />
-            IDEA?
-          </p>
-          <p className="text-xs font-medium text-black/50 mt-1">Let's Talk →</p>
-        </a>
       </div>
 
       {/* Project grid */}

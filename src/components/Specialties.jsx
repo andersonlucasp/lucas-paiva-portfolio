@@ -52,9 +52,10 @@ export default function Specialties() {
       titleRefs.current.forEach((el, i) =>
         gsap.set(el, { opacity: i === 0 ? 1 : 0, y: i === 0 ? 0 : 50 })
       )
-      barRefs.current.forEach((el, i) =>
-        gsap.set(el, { width: i === 0 ? 40 : 14 })
-      )
+      // steps controlados via onUpdate (não GSAP)
+      barRefs.current.forEach((el, i) => {
+        el.style.background = i === 0 ? '#fff' : 'rgba(255,255,255,0.25)'
+      })
 
       // Cada card começa deslocado por i*VH dentro do wrapper.
       // Quando o wrapper se mover -i*VH, o card i chegará à posição natural (y=0).
@@ -72,9 +73,17 @@ export default function Specialties() {
           clamp: true,
           onUpdate(self) {
             if (!counterRef.current) return
-            const idx = Math.min(N, Math.floor(self.progress * items.length))
+            const activeStep = Math.min(items.length - 1, Math.floor(self.progress * items.length))
+
+            // counter
             counterRef.current.textContent =
-              `${String(idx + 1).padStart(2, '0')} / ${String(items.length).padStart(2, '0')}`
+              `${String(activeStep + 1).padStart(2, '0')} / ${String(items.length).padStart(2, '0')}`
+
+            // steps acumulativos: ativos e passados ficam brancos, futuros cinza
+            barRefs.current.forEach((el, i) => {
+              if (!el) return
+              el.style.background = i <= activeStep ? '#fff' : 'rgba(255,255,255,0.25)'
+            })
           },
         },
       })
@@ -94,8 +103,6 @@ export default function Specialties() {
           .to(titleRefs.current[i],     { opacity: 1, y: 0,   ease: 'none', duration: 0.25 }, i - 0.12)
           .to(bgRefs.current[i - 1],    { opacity: 0, duration: 0.4 }, i - 0.2)
           .to(bgRefs.current[i],        { opacity: 1, duration: 0.4 }, i - 0.2)
-          .to(barRefs.current[i - 1],   { width: 14, duration: 0.2 }, i - 0.1)
-          .to(barRefs.current[i],       { width: 40, duration: 0.2 }, i - 0.1)
       }
     })
 
@@ -190,7 +197,7 @@ export default function Specialties() {
                   key={i}
                   ref={el => barRefs.current[i] = el}
                   className="h-[2px] rounded-full"
-                  style={{ background: i === 0 ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.2)' }}
+                  style={{ width: '32px', background: i === 0 ? '#fff' : 'rgba(255,255,255,0.25)' }}
                 />
               ))}
             </div>

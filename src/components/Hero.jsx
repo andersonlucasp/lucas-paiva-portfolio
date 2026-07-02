@@ -1,9 +1,14 @@
 export default function Hero() {
   return (
-    <section className="hero-section relative h-screen overflow-hidden bg-bg" style={{ position: 'sticky', top: 0, zIndex: 1, transformOrigin: 'center center' }}>
-
-      {/* Main photo — borda a borda, sem inset */}
-      <div className="hero-img absolute inset-x-3 top-3 bottom-3 rounded-2xl overflow-hidden" style={{ opacity: 0, transform: 'scale(1.15)' }}>
+    <section
+      className="hero-section relative h-screen overflow-hidden bg-bg"
+      style={{ position: 'sticky', top: 0, zIndex: 1, transformOrigin: 'center center' }}
+    >
+      {/* Main photo */}
+      <div
+        className="hero-img absolute inset-x-3 top-3 bottom-3 rounded-2xl overflow-hidden"
+        style={{ opacity: 0, transform: 'scale(1.15)' }}
+      >
         <div className="hero-overlay absolute inset-0" />
       </div>
 
@@ -39,7 +44,7 @@ export default function Hero() {
         </h1>
       </div>
 
-      {/* Texto descritivo — bottom right (estilo Xenith) */}
+      {/* Texto descritivo — bottom right */}
       <div className="absolute bottom-14 right-16 z-10 max-w-xs text-right">
         <p className="text-base leading-relaxed text-white/70">
           //Senior Product Designer at Itaú Unibanco — leading Design Ops and Design System for 40+ business segments across Latin America.

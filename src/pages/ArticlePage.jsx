@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
+import Footer from '../components/Footer'
 
 function readTime(html = '') {
   const words = html.replace(/<[^>]+>/g, '').split(/\s+/).length
@@ -46,6 +47,7 @@ export default function ArticlePage() {
   const content = removeFirstImage(item.content)
 
   return (
+    <>
     <div className="min-h-screen bg-bg">
       {/* Back */}
       <div className="fixed top-24 left-16 z-40">
@@ -146,5 +148,7 @@ export default function ArticlePage() {
 
       </div>
     </div>
+    <Footer />
+  </>
   )
 }

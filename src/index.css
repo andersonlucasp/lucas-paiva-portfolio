@@ -51,7 +51,7 @@ body { background: #0b0b0b; color: #fff; font-family: 'Space Grotesk', sans-seri
 
 /* Projects */
 .proj-main { background-image: url('/img/itau/03.png');      background-size: cover; background-position: center; }
-.proj-2    { background-image: url('/img/proj-elo.jpg');    background-size: cover; background-position: center; }
+.proj-2    { background-image: url('/img/elo/01.png');       background-size: cover; background-position: center; }
 .proj-3    { background-image: url('/img/proj-sukinho.jpg'); background-size: cover; background-position: center; }
 
 /* Testimonial photos */

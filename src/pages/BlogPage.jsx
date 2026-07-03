@@ -29,7 +29,7 @@ function ListCard({ item, isLast }) {
     <Link
       to={articlePath(item)}
       state={{ item }}
-      className="group grid grid-cols-2 gap-12 items-center py-12"
+      className="group grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center py-8 md:py-12"
       style={!isLast ? { borderBottom: '1px solid rgba(255,255,255,0.08)' } : {}}
     >
       {image && (
@@ -41,13 +41,13 @@ function ListCard({ item, isLast }) {
           />
         </div>
       )}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-3 md:gap-4">
         {item.categories?.[0] && (
           <span className="text-xs font-semibold tracking-[0.15em] uppercase text-white/35">
             {item.categories[0]}
           </span>
         )}
-        <h2 className="text-[clamp(24px,3vw,36px)] font-bold leading-[1.1] tracking-tightest text-white group-hover:text-white/80 transition-colors">
+        <h2 className="text-[22px] md:text-[clamp(24px,3vw,36px)] font-bold leading-[1.15] tracking-tightest text-white group-hover:text-white/80 transition-colors">
           {item.title}
         </h2>
         <div className="flex items-center gap-3 text-xs text-white/30 font-mono">
@@ -97,22 +97,22 @@ export default function BlogPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-bg pt-32 pb-24 px-16">
+    <div className="min-h-screen bg-bg pt-24 pb-16 px-5 md:pt-32 md:pb-24 md:px-16">
 
       {/* Header */}
-      <div className="mb-20">
+      <div className="mb-12 md:mb-20">
         <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-6">
           // Blog
         </p>
-        <div className="flex items-end justify-between">
-          <h1 className="text-[clamp(56px,8vw,100px)] font-bold tracking-tightest uppercase leading-none">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+          <h1 className="text-[clamp(36px,8vw,100px)] font-bold tracking-tightest uppercase leading-none">
             WRITING &<br />THINKING
           </h1>
           <a
             href="https://medium.com/@andersonlucaspaiva"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-white/40 hover:text-white transition-colors mb-2"
+            className="text-sm font-medium text-white/40 hover:text-white transition-colors md:mb-2"
           >
             Follow on Medium →
           </a>
@@ -122,7 +122,7 @@ export default function BlogPage() {
       {/* Loading */}
       {loading && (
         <>
-          <div className="grid grid-cols-2 gap-12 mb-20 pb-20"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 mb-12 md:mb-20 pb-12 md:pb-20"
             style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
             <div className="rounded-2xl aspect-[16/10] animate-pulse"
               style={{ background: 'rgba(255,255,255,0.06)' }} />
@@ -133,7 +133,7 @@ export default function BlogPage() {
               ))}
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
             {[...Array(6)].map((_, i) => <SkeletonCard key={i} />)}
           </div>
         </>

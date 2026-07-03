@@ -12,7 +12,6 @@ import Specialties from './components/Specialties'
 import Work from './components/Work'
 import Process from './components/Process'
 import Testimonials from './components/Testimonials'
-import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import BlogPage from './pages/BlogPage'
@@ -130,7 +129,6 @@ function Home() {
       <Specialties />
       <Process />
       <Testimonials />
-      <FAQ />
       <Contact />
       <Footer />
     </>

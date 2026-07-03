@@ -94,7 +94,7 @@ export const projects = [
     service: 'UX Design · Web Design',
     timeline: '4 Months',
     role: 'Product Designer',
-    heroImage: '/img/elo/01.png',
+    heroImage: '/img/elo/03.png',
     intro: 'Elo is one of Brazil\'s largest payment brands, operating across millions of cardholders and merchants. Despite its strong brand presence, the existing website received frequent feedback describing the experience as a true "patchwork." It lacked consistency and visual standards, and with every redirect, users felt as if they were navigating a completely different site rather than Elo\'s own platform.',
     sections: [
       {

@@ -3,6 +3,53 @@ import { useParams, useNavigate, Link } from 'react-router-dom'
 import { getProject, getRelated } from '../data/projects'
 import Footer from '../components/Footer'
 
+const PROTECTED_SLUGS = { 'itau-design-system': 'casesjobs2026' }
+const SESSION_KEY = (slug) => `unlocked_${slug}`
+
+function PasswordGate({ slug, onUnlock }) {
+  const [value, setValue] = useState('')
+  const [error, setError] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (value === PROTECTED_SLUGS[slug]) {
+      sessionStorage.setItem(SESSION_KEY(slug), '1')
+      onUnlock()
+    } else {
+      setError(true)
+      setValue('')
+    }
+  }
+
+  return (
+    <div className="min-h-screen bg-bg flex items-center justify-center px-6">
+      <div className="w-full max-w-sm">
+        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-4">// Acesso restrito</p>
+        <h2 className="text-3xl font-bold tracking-tightest uppercase mb-2">Conteúdo protegido</h2>
+        <p className="text-sm text-white/40 mb-10">Este case ainda não é público. Insira a senha para continuar.</p>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+          <input
+            type="password"
+            placeholder="Senha"
+            value={value}
+            onChange={(e) => { setValue(e.target.value); setError(false) }}
+            className="w-full px-5 py-3.5 rounded-xl text-sm"
+            autoFocus
+          />
+          {error && <p className="text-xs text-red-400">Senha incorreta. Tente novamente.</p>}
+          <button
+            type="submit"
+            className="w-full px-5 py-3.5 bg-white text-bg text-sm font-semibold rounded-xl hover:bg-white/90 transition-colors"
+          >
+            Entrar
+          </button>
+        </form>
+        <Link to="/" className="block mt-8 text-xs text-white/30 hover:text-white transition-colors">← Voltar ao portfolio</Link>
+      </div>
+    </div>
+  )
+}
+
 export default function ProjectPage() {
   const { slug } = useParams()
   const navigate = useNavigate()
@@ -10,6 +57,10 @@ export default function ProjectPage() {
   const related = getRelated(slug)
   const [activeImg, setActiveImg] = useState(0)
   const [expanded, setExpanded] = useState(false)
+  const isProtected = !!PROTECTED_SLUGS[slug]
+  const [unlocked, setUnlocked] = useState(
+    !isProtected || sessionStorage.getItem(SESSION_KEY(slug)) === '1'
+  )
 
   useEffect(() => {
     document.documentElement.style.overflow = ''
@@ -34,6 +85,10 @@ export default function ProjectPage() {
         <p className="text-white/40 text-sm">Project not found. <Link to="/" className="underline hover:text-white">Go home</Link></p>
       </div>
     )
+  }
+
+  if (!unlocked) {
+    return <PasswordGate slug={slug} onUnlock={() => setUnlocked(true)} />
   }
 
   return (

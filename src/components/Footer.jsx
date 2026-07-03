@@ -57,7 +57,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright bar */}
-      <div className="px-5 md:px-16 pb-8 -mt-4 md:-mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-1 text-xs text-white/25">
+      <div className="px-5 md:px-16 pb-8 mt-6 md:-mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-1 text-xs text-white/25">
         <p>© 2025 Lucas Paiva. All Rights Reserved.</p>
         <p>Designed in Figma</p>
       </div>

@@ -98,6 +98,7 @@ export default function BlogPage() {
   }, [])
 
   return (
+    <>
     <div className="min-h-screen bg-bg pt-24 pb-16 px-5 md:pt-32 md:pb-24 md:px-16">
 
       {/* Header */}
@@ -161,5 +162,6 @@ export default function BlogPage() {
       )}
     </div>
     <Footer />
+  </>
   )
 }

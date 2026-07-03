@@ -19,7 +19,7 @@ export default function Hero() {
       />
 
       {/* Título — bottom left */}
-      <div className="absolute bottom-8 left-5 md:bottom-14 md:left-16 z-10">
+      <div className="absolute bottom-20 left-5 md:bottom-14 md:left-16 z-10">
         <p
           className="hero-subtitle text-xs md:text-sm font-medium text-white/50 tracking-[0.15em] uppercase mb-3"
           style={{ opacity: 0, transform: 'translateY(20px)' }}
@@ -52,7 +52,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll hint */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/30 text-xs tracking-widest uppercase">
+      <div className="absolute bottom-0 md:bottom-4 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/30 text-xs tracking-widest uppercase">
         <span>Scroll</span>
         <div className="w-px h-8 bg-white/20" />
       </div>

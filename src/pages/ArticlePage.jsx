@@ -50,7 +50,7 @@ export default function ArticlePage() {
     <>
     <div className="min-h-screen bg-bg">
       {/* Back */}
-      <div className="fixed top-24 left-16 z-40">
+      <div className="fixed top-20 left-5 md:top-24 md:left-16 z-40">
         <button
           onClick={() => navigate('/blog')}
           className="flex items-center gap-2 text-xs font-medium text-white/35 hover:text-white transition-colors"
@@ -60,7 +60,7 @@ export default function ArticlePage() {
       </div>
 
       {/* Hero */}
-      <div className="pt-32 pb-0 px-16 max-w-[860px] mx-auto">
+      <div className="pt-24 pb-0 px-5 md:pt-32 md:px-16 max-w-[860px] mx-auto">
         {/* Meta */}
         {item.categories?.[0] && (
           <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/35 mb-6">
@@ -105,14 +105,14 @@ export default function ArticlePage() {
 
       {/* Article body */}
       <div
-        className="article-body max-w-[680px] mx-auto px-16 pb-16"
+        className="article-body max-w-[680px] mx-auto px-5 md:px-16 pb-12 md:pb-16 overflow-x-hidden"
         dangerouslySetInnerHTML={{ __html: content }}
       />
 
       {/* Footer do artigo */}
-      <div className="max-w-[680px] mx-auto px-16 pb-32">
+      <div className="max-w-[680px] mx-auto px-5 md:px-16 pb-20 md:pb-32">
         <div
-          className="flex items-center justify-between py-10 mb-12"
+          className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 py-10 mb-12"
           style={{ borderTop: '1px solid rgba(255,255,255,0.08)', borderBottom: '1px solid rgba(255,255,255,0.08)' }}
         >
           {/* Clap button */}

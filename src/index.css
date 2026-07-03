@@ -64,7 +64,8 @@ body { background: #0b0b0b; color: #fff; font-family: 'Space Grotesk', sans-seri
 .test-photo-4 { background-image: url('/img/testimonial-4.png'); }
 
 /* Article body (blog post) */
-.article-body { color: rgba(255,255,255,0.75); font-size: 18px; line-height: 1.8; }
+.article-body { color: rgba(255,255,255,0.75); font-size: 18px; line-height: 1.8; overflow-x: hidden; }
+@media (max-width: 768px) { .article-body { font-size: 16px; } }
 .article-body h1, .article-body h2, .article-body h3, .article-body h4 {
   color: #fff; font-weight: 700; letter-spacing: -0.03em; margin: 2em 0 0.6em;
 }

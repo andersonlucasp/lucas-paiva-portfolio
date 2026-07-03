@@ -27,7 +27,7 @@ body { background: #0b0b0b; color: #fff; font-family: 'Space Grotesk', sans-seri
   background-position: 60% 15%;
 }
 @media (max-width: 768px) {
-  .hero-img { background-position: 55% 10%; }
+  .hero-img { background-position: 40% 0%; }
 }
 .hero-overlay {
   background: linear-gradient(

@@ -47,7 +47,7 @@ export default function Footer() {
       </div>
 
       {/* Big wordmark */}
-      <div className="px-6 pb-0 pt-2 relative">
+      <div className="px-5 md:px-16 pb-0 pt-2 relative">
         <p
           className="text-[clamp(80px,14vw,200px)] font-bold tracking-tightest uppercase leading-none select-none"
           style={{ color: 'rgba(255,255,255,0.05)' }}
@@ -57,7 +57,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright bar */}
-      <div className="px-5 md:px-16 pb-8 mt-6 md:-mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-1 text-xs text-white/25">
+      <div className="px-5 md:px-16 pb-8 mt-4 flex flex-col md:flex-row md:items-center md:justify-between gap-1 text-xs text-white/25">
         <p>© 2025 Lucas Paiva. All Rights Reserved.</p>
         <p>Designed in Figma</p>
       </div>

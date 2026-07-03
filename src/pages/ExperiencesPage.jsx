@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 
 const experiences = [
   {
+    period: '2024 — Present',
     role: 'Senior Product Designer',
     company: 'Itaú Unibanco',
     description: [
@@ -12,6 +13,7 @@ const experiences = [
     ],
   },
   {
+    period: '2019 — 2024',
     role: 'Product Designer',
     company: 'Elo Cartão',
     description: [
@@ -21,6 +23,7 @@ const experiences = [
     ],
   },
   {
+    period: '2017 — 2019',
     role: 'IT & Functional Analyst',
     company: 'Tata Consultancy Services',
     description: [
@@ -57,22 +60,33 @@ export default function ExperiencesPage() {
         <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-8">
           // Experience
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8 md:gap-20 items-start">
-          <h1 className="text-[clamp(48px,9vw,120px)] font-bold leading-[0.88] tracking-tightest uppercase">
-            LUCAS
-            <br />
-            PAIVA
-          </h1>
-          <div className="flex flex-col gap-5 pt-3 text-base text-white/60 leading-relaxed">
-            <p>
-              With 4 years of experience in UX, UI, and Product Design, I currently work at Itaú Unibanco — the largest bank in Latin America — where I contribute to large-scale digital initiatives, including the creation of a new, unified design system for 40+ business segments.
-            </p>
-            <p>
-              My background spans B2B and B2C products, from financial platforms to large-scale digital services, always focusing on solving real user problems through design that's strategic, research-informed, and execution-ready. Previously, I worked at Elo, Brazil's biggest 100% national card brand, where I helped enhance user experiences and strengthen digital products. My expertise spans Design Systems, Design Ops, and accessibility, enabling teams to deliver with speed, consistency, and quality.
-            </p>
-            <p>
-              In parallel with my full-time role, I also take on freelance and consulting work — supporting product teams that need senior design expertise, a fresh perspective, or guidance to shape and ship better digital experiences.
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-10 md:gap-16 items-stretch">
+          <div>
+            <h1 className="text-[clamp(48px,9vw,120px)] font-bold leading-[0.88] tracking-tightest uppercase mb-10">
+              LUCAS
+              <br />
+              PAIVA
+            </h1>
+            <div className="flex flex-col gap-5 text-base text-white/60 leading-relaxed">
+              <p>
+                With 4 years of experience in UX, UI, and Product Design, I currently work at Itaú Unibanco — the largest bank in Latin America — where I contribute to large-scale digital initiatives, including the creation of a new, unified design system for 40+ business segments.
+              </p>
+              <p>
+                My background spans B2B and B2C products, from financial platforms to large-scale digital services, always focusing on solving real user problems through design that's strategic, research-informed, and execution-ready. Previously, I worked at Elo, Brazil's biggest 100% national card brand, where I helped enhance user experiences and strengthen digital products. My expertise spans Design Systems, Design Ops, and accessibility, enabling teams to deliver with speed, consistency, and quality.
+              </p>
+              <p>
+                In parallel with my full-time role, I also take on freelance and consulting work — supporting product teams that need senior design expertise, a fresh perspective, or guidance to shape and ship better digital experiences.
+              </p>
+            </div>
+          </div>
+
+          {/* Photo */}
+          <div className="hidden md:flex">
+            <img
+              src="/img/experiences/experience01.png"
+              alt="Lucas Paiva"
+              className="w-full rounded-2xl object-cover object-top"
+            />
           </div>
         </div>
       </section>
@@ -87,13 +101,20 @@ export default function ExperiencesPage() {
             <div
               key={i}
               className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6 md:gap-16 py-10 md:py-14"
-              style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
+              style={i > 0 ? { borderTop: '1px solid rgba(255,255,255,0.08)' } : {}}
             >
               {/* Left: role + company */}
               <div>
-                <p className="text-[11px] font-semibold tracking-widest uppercase text-white/25 mb-4">
-                  {String(i + 1).padStart(2, '0')}
-                </p>
+                {i === 0 ? (
+                  <span className="inline-block px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-widest uppercase mb-4"
+                    style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.6)' }}>
+                    Current
+                  </span>
+                ) : (
+                  <p className="text-[11px] font-semibold tracking-widest uppercase text-white/25 mb-4">
+                    {exp.period}
+                  </p>
+                )}
                 <h2 className="text-xl font-bold tracking-tightest uppercase leading-tight mb-2">
                   {exp.role}
                 </h2>

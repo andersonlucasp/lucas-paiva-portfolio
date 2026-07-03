@@ -20,16 +20,14 @@ export default function ProjectsPage() {
         <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-6">
           // My Work
         </p>
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-8">
-          <h1 className="text-[clamp(44px,10vw,130px)] font-bold leading-[0.88] tracking-tightest uppercase">
-            ALL
-            <br />
-            PROJECTS
-          </h1>
-          <p className="max-w-xs text-sm md:text-base text-white/50 leading-relaxed md:mb-3">
-            A curated set of digital experiences crafted with strategy, UX, and design — delivering impact across different industries and scales.
-          </p>
-        </div>
+        <h1 className="text-[clamp(44px,10vw,130px)] font-bold leading-[0.88] tracking-tightest uppercase mb-6">
+          ALL
+          <br />
+          PROJECTS
+        </h1>
+        <p className="max-w-sm text-sm md:text-base text-white/50 leading-relaxed">
+          A curated set of digital experiences crafted with strategy, UX, and design — delivering impact across different industries and scales.
+        </p>
       </section>
 
       {/* Project grid */}

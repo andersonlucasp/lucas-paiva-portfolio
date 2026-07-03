@@ -1,12 +1,16 @@
+import { Link } from 'react-router-dom'
+
 const projects = [
   {
     cls: 'proj-2',
+    slug: 'elo-redesign',
     tag: 'UX / Web Design',
     title: 'Elo Website\nRedesign',
     year: '2023',
   },
   {
     cls: 'proj-3',
+    slug: 'sukinho-rebranding',
     tag: 'Branding',
     title: 'Sukinho\nRebranding',
     year: '2023',
@@ -33,14 +37,13 @@ export default function Work() {
             PROJECT
           </h2>
         </div>
-
       </div>
 
       {/* Project grid */}
       <div className="relative z-10 grid grid-cols-[1fr_auto] gap-5">
         {/* Main project */}
-        <a
-          href="#"
+        <Link
+          to="/project/itau-design-system"
           className="proj-main relative rounded-2xl overflow-hidden group"
           style={{ height: 560 }}
         >
@@ -67,14 +70,14 @@ export default function Work() {
             </p>
             <p className="text-sm text-white/50 mt-2">2025 · Product Designer</p>
           </div>
-        </a>
+        </Link>
 
         {/* Right stack */}
         <div className="flex flex-col gap-5 w-[420px]">
-          {projects.map(({ cls, tag, title, year }) => (
-            <a
+          {projects.map(({ cls, slug, tag, title, year }) => (
+            <Link
               key={cls}
-              href="#"
+              to={`/project/${slug}`}
               className={`${cls} relative rounded-2xl overflow-hidden group flex-1`}
             >
               <div
@@ -95,17 +98,17 @@ export default function Work() {
                 </p>
                 <p className="text-xs text-white/50 mt-1">{year}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
 
-      <a
-        href="#"
+      <Link
+        to="/project/itau-design-system"
         className="relative z-10 inline-block mt-8 text-sm font-medium text-white/40 hover:text-white transition-colors"
       >
         View all projects →
-      </a>
+      </Link>
     </section>
   )
 }

@@ -1,0 +1,169 @@
+export const projects = [
+  {
+    slug: 'itau-design-system',
+    title: 'Design System\nItaú Unibanco',
+    subtitle: 'Building a Multi-Brand Design System for Latin America\'s Largest Bank, Itaú Unibanco',
+    tag: 'Design System',
+    year: '2025',
+    client: 'Itaú Unibanco',
+    service: 'Design Ops',
+    timeline: '12+ Months',
+    role: 'Senior Product Designer',
+    heroImage: '/img/itau/03.png',
+    intro: 'The Itaú Design System was already an important foundation for the bank, helping teams create more consistent and scalable digital experiences. But as Itaú grew, the system needed to grow too. More teams, more journeys and more complex products started to demand a stronger structure. This case is about how we redesigned that foundation to make the Design System more flexible, accessible and ready to support the next generation of digital banking.',
+    sections: [
+      {
+        title: 'The Challenge',
+        intro: 'As the largest company in Latin America, with over 99,000 employees and more than 40 business segments, Itaú Unibanco faced a complex challenge: multiple design systems coexisted within the organization, each with its own standards, visual languages, and technical limitations.\n\nThe official Ops team\'s design system presented friction points, inconsistencies, and bugs that slowed down product delivery and reduced brand cohesion.\n\nKey challenges included:',
+        items: [
+          { label: 'Fragmented design ecosystem', text: 'Inconsistent components, visual patterns, and interaction models across segments created disjointed user experiences.' },
+          { label: 'Multiple brands and styles', text: 'Beyond Itaú\'s flagship brand, the system needed to support over 40 segments, each with its own colors, curves, and visual identity requirements.' },
+          { label: 'Scalability concerns', text: 'Existing solutions lacked the flexibility and governance needed to scale across such a diverse ecosystem.' },
+          { label: 'Technical debt', text: 'Outdated code and component structures hindered performance, accessibility, and maintainability.' },
+          { label: 'Lack of unified governance', text: 'Without a single source of truth, teams faced duplicated work, slower delivery, and inconsistent quality.' },
+        ],
+      },
+      {
+        title: 'My Role',
+        intro: 'I worked as a Senior Product Designer within the core team responsible for shaping the next generation of Itaú\'s Design System.\n\nMy biggest contribution was facilitating the collaborative process that aligned designers, stakeholders and specialists around a shared vision.\n\nMy responsibilities included:',
+        items: [
+          { text: 'Planning and facilitating a multi-day Design Sprint (War Room)' },
+          { text: 'Synthesizing inputs from different business segments' },
+          { text: 'Defining visual foundations and design principles' },
+          { text: 'Supporting multi-brand architecture decisions' },
+          { text: 'Aligning accessibility, brand and product requirements' },
+          { text: 'Helping establish governance and adoption strategies' },
+          { text: 'Driving decision-making between competing stakeholder needs' },
+        ],
+        outro: 'The result will be a future-proof, single source of truth that will enable teams to deliver faster, more consistent, and higher-quality digital experiences across all Itaú Unibanco products and brands.',
+        image: '/img/itau/08.png',
+      },
+      {
+        eyebrow: 'First Steps',
+        title: 'Strategy',
+        intro: 'To address these challenges, we approached the creation of Itaú Unibanco\'s new design system through three strategic pillars:',
+        items: [
+          { label: 'Scalability Across Brands and Segments', text: 'We developed a flexible architecture capable of supporting more than 40 business segments, each with its own colors, curves, and brand identity. This modular approach allows teams to apply unique visual languages while maintaining consistency in structure, accessibility, and performance.' },
+          { label: 'Governance and Operational Efficiency', text: 'We established clear governance guidelines, component documentation, and adoption processes to ensure that all squads could work from a single source of truth. This framework reduced duplicated efforts, improved communication between teams, and accelerated delivery cycles.' },
+          { label: 'Consistency in Design and User Experience', text: 'By defining standardized UI patterns, visual tokens, and reusable components, we eliminated inconsistencies across products and brands. This not only reinforced Itaú\'s visual identity but also improved usability, reduced cognitive load for users, and streamlined long-term maintenance.' },
+        ],
+        image: '/img/itau/itau03.avif',
+      },
+      {
+        eyebrow: 'Outcomes',
+        title: 'Research & Discovery',
+        intro: 'To deeply understand the needs of both the business and the design teams, we began with a series of conversations with stakeholders, managers, and directors from multiple bank segments. These discussions helped map current challenges, expectations, and priorities for the new design system.\n\nWe also mapped leading companies recognized for their design systems such as Spotify, Airbnb, Google, Apple, and Uber to extract best practices and inspiration for our project.\n\nNext, we brought together designers from different squads and the Ops team for two days of co-creation sessions. Through collaborative activities and the use of illustrative bento layouts, we explored possibilities, validated ideas, and defined the visual patterns that would guide component design.\n\nThis process ensured that the foundations of the new system were not only aligned with the bank\'s recent rebranding but also tailored to the practical needs of the teams who would use it daily — making it scalable and grounded in real operational contexts.',
+        image: '/img/itau/itau04.avif',
+      },
+      {
+        eyebrow: 'The Final Result',
+        title: 'Impact & Results',
+        intro: 'To address the fragmentation and scalability challenges, we developed a unified and scalable design system for Itaú Unibanco that supports over 40 distinct business segments and brand identities.\n\nBy creating a modular architecture with standardized components, visual tokens, and flexible theming capabilities, teams across the bank can now build consistent interfaces rapidly without reinventing patterns or compromising on accessibility and performance.\n\nThis harmonization drastically reduced duplicated efforts and design inconsistencies, enabling faster delivery cycles and improving overall product quality.\n\nKey results include:',
+        items: [
+          { label: '+60%', text: 'reduction in design and development time for new features and product launches due to reusable components and clear documentation.' },
+          { label: '+50%', text: 'increase in cross-team collaboration efficiency, as squads now share a single source of truth and governance framework.' },
+          { label: '+40%', text: 'improvement in accessibility compliance scores across audited products, ensuring inclusive user experiences.' },
+          { label: '100%', text: 'of segments now receive a consistent brand experience, aligning visual language and interaction patterns despite varied brand identities.' },
+          { text: 'Significant reduction in maintenance overhead, with centralized updates propagating to all products seamlessly, saving hundreds of developer hours monthly.' },
+        ],
+        outro: 'This strategic investment in design system modernization has empowered Itaú Unibanco\'s teams to innovate faster while delivering higher quality and more cohesive digital experiences across its vast ecosystem.',
+        image: '/img/itau/itau06.avif',
+      },
+      {
+        title: 'Final Thoughts',
+        intro: 'This design system project was not just about creating a modern UI—it was about fostering a unified culture across diverse business segments, empowering internal teams with scalable tools, and ensuring compliance with global accessibility standards.\n\nThe success of this initiative demonstrates that delivering consistent, inclusive, and high-quality digital experiences at scale requires not only cutting-edge technology but also deep understanding of brand diversity and operational realities.\n\nBy balancing innovation with governance and collaboration, Itaú Unibanco is positioned to lead the market with a design system that truly supports its vast and varied ecosystem.',
+      },
+    ],
+    gallery: [
+      '/img/itau/itau01.avif',
+      '/img/itau/itau02.avif',
+      '/img/itau/itau03.avif',
+      '/img/itau/itau04.avif',
+      '/img/itau/itau06.avif',
+      '/img/itau/itau07.avif',
+      '/img/itau/itau08.avif',
+    ],
+  },
+  {
+    slug: 'elo-redesign',
+    title: 'Elo Website\nRedesign',
+    subtitle: 'Redesigning Brazil\'s Leading Payment Brand for the Digital Age',
+    tag: 'UX / Web Design',
+    year: '2023',
+    client: 'Elo',
+    service: 'UX Design · Web Design',
+    timeline: '4 Months',
+    heroImage: '/img/proj-elo.jpg',
+    thumbnails: [
+      'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=260&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=260&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&h=260&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1636955816868-fcb881e57954?w=400&h=260&fit=crop&q=80',
+    ],
+    intro: 'Elo is one of Brazil\'s largest payment brands, operating across millions of cardholders and merchants. The existing website was fragmented, visually dated, and failing to communicate the brand\'s ambition. The redesign needed to elevate the brand, simplify the experience, and serve multiple audiences simultaneously.',
+    sections: [
+      {
+        title: 'The Challenge',
+        text: 'The existing website tried to serve too many audiences at once — cardholders, merchants, and partners — without clear hierarchy or navigation. The visual design was inconsistent with the brand\'s new positioning, and key user journeys were buried under layers of navigation.',
+      },
+      {
+        title: 'Solution',
+        text: 'We restructured the information architecture around the three core audiences, giving each a clear entry point and tailored journey. The visual redesign brought the brand\'s identity to life: bold typography, confident use of Elo\'s yellow, and photography that felt contemporary and inclusive.\n\nInteraction design focused on clarity and speed — reducing cognitive load and making the most important actions accessible within two clicks.',
+      },
+      {
+        title: 'Outcomes',
+        text: 'A website that reflects Elo\'s brand ambition and serves its audiences with clarity. Clean, bold design, improved navigation, and a visual language that modernizes the brand without losing its recognition.',
+      },
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=700&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=700&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=700&fit=crop&q=80',
+    ],
+  },
+  {
+    slug: 'sukinho-rebranding',
+    title: 'Sukinho\nRebranding',
+    subtitle: 'Crafting a Bold New Identity for Brazil\'s Beloved Snack Brand',
+    tag: 'Branding',
+    year: '2023',
+    client: 'Sukinho',
+    service: 'Branding · Visual Identity',
+    timeline: '3 Months',
+    heroImage: '/img/proj-sukinho.jpg',
+    thumbnails: [
+      'https://images.unsplash.com/photo-1636955816868-fcb881e57954?w=400&h=260&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&h=260&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=260&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=400&h=260&fit=crop&q=80',
+    ],
+    intro: 'Sukinho is a beloved Brazilian snack brand with strong recognition but an outdated identity. As the brand expanded into new markets and product lines, the visual identity needed to evolve — keeping the energy and playfulness that fans loved, while feeling modern and shelf-competitive.',
+    sections: [
+      {
+        title: 'The Challenge',
+        text: 'The existing identity was rooted in the 90s — charming, but increasingly out of place on modern shelves and digital touchpoints. The challenge was to modernize without alienating the loyal consumer base, and to create a system flexible enough to extend across a growing product portfolio.',
+      },
+      {
+        title: 'Solution',
+        text: 'We retained the brand\'s core equity — the mascot, the name, the energy — and rebuilt the visual system around it. A new custom typeface, a refreshed color palette with more pop and shelf-impact, and updated illustration guidelines gave the brand room to breathe across packaging, social, and in-store.\n\nThe mascot was redrawn with more expressiveness and scalability, working at everything from packaging to app icons.',
+      },
+      {
+        title: 'Outcomes',
+        text: 'A refreshed brand that feels modern and competitive while honoring its heritage. The new identity launched across all packaging lines and digital channels, with strong reception from both the brand team and consumers.',
+      },
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1636955816868-fcb881e57954?w=1200&h=700&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=700&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200&h=700&fit=crop&q=80',
+    ],
+  },
+]
+
+export function getProject(slug) {
+  return projects.find(p => p.slug === slug)
+}
+
+export function getRelated(slug) {
+  return projects.filter(p => p.slug !== slug).slice(0, 2)
+}

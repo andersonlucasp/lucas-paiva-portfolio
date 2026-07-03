@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       className="hero-section relative h-screen overflow-hidden bg-bg"
-      style={{ position: 'sticky', top: 0, zIndex: 1, transformOrigin: 'center center' }}
+      style={{ position: 'sticky', top: 0, zIndex: 1, transformOrigin: 'center center', pointerEvents: 'none' }}
     >
       {/* Main photo */}
       <div

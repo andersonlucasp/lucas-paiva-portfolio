@@ -139,18 +139,17 @@ export default function Specialties() {
               Todos os cards estão dentro, espaçados por VH via transform.    */}
           <div
             ref={cardWrapperRef}
-            className="absolute will-change-transform"
-            style={{ bottom: '64px', right: '64px', width: '480px', zIndex: 3 }}
+            className="absolute will-change-transform bottom-5 left-5 right-5 md:left-auto md:bottom-16 md:right-16 md:w-[480px] z-[3]"
           >
             {items.map((item, i) => (
               <div
                 key={i}
                 ref={el => cardRefs.current[i] = el}
-                className="absolute rounded-2xl p-7 will-change-transform"
+                className="absolute rounded-2xl p-5 md:p-7 will-change-transform"
                 style={{
                   bottom: 0,
                   right: 0,
-                  width: '480px',
+                  width: '100%',
                   background: 'rgba(255,255,255,0.07)',
                   backdropFilter: 'blur(16px)',
                   WebkitBackdropFilter: 'blur(16px)',
@@ -165,7 +164,7 @@ export default function Specialties() {
 
           {/* Títulos + header + progress bars */}
           <div
-            className="relative flex flex-col px-16 pt-28 pb-16"
+            className="relative flex flex-col px-5 pt-20 pb-10 md:px-16 md:pt-28 md:pb-16"
             style={{ height: '100%', zIndex: 2 }}
           >
             <div className="flex justify-between items-center">
@@ -184,7 +183,7 @@ export default function Specialties() {
                   ref={el => titleRefs.current[i] = el}
                   className="absolute will-change-transform"
                 >
-                  <h2 className="text-[clamp(60px,7vw,110px)] font-bold leading-[0.9] tracking-tightest uppercase">
+                  <h2 className="text-[clamp(32px,7vw,110px)] font-bold leading-[0.9] tracking-tightest uppercase">
                     {item.title}
                   </h2>
                 </div>

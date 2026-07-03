@@ -7,8 +7,8 @@ const info = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-bg pb-28 px-16 reveal">
-      <div className="grid grid-cols-2 gap-20">
+    <section id="contact" className="bg-bg pb-16 px-5 md:pb-28 md:px-16 reveal">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
         {/* Left */}
         <div className="flex flex-col justify-between">
           <div>
@@ -44,7 +44,7 @@ export default function Contact() {
 
         {/* Right: Form */}
         <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col gap-2">
               <label className="text-xs font-medium text-white/40">Full Name *</label>
               <input type="text" placeholder="Your full name" className="px-4 py-3.5 rounded-xl text-sm w-full" />

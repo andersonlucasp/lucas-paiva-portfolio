@@ -35,16 +35,16 @@ export default function Testimonials() {
   const allItems = [...tickerItems, ...tickerItems] // duplicate for seamless loop
 
   return (
-    <section className="bg-bg py-28 px-16 reveal">
+    <section className="bg-bg py-16 px-5 md:py-28 md:px-16 reveal">
       <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-6">
         // Testimonials
       </p>
-      <h2 className="text-[60px] font-bold tracking-tightest uppercase mb-12">
+      <h2 className="text-[36px] md:text-[60px] font-bold tracking-tightest uppercase mb-10 md:mb-12">
         WHAT CLIENTS SAY
       </h2>
 
       {/* Ticker */}
-      <div className="ticker-wrap mb-12 -mx-16">
+      <div className="ticker-wrap mb-10 md:mb-12 -mx-5 md:-mx-16">
         <div className="ticker-track px-16">
           {allItems.map((item, i) => (
             <span
@@ -58,21 +58,21 @@ export default function Testimonials() {
       </div>
 
       {/* Testimonial grid */}
-      <div className="grid grid-cols-[1fr_340px] gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_340px] gap-5">
         {/* Left: stacked cards */}
         <div className="flex flex-col gap-4">
           {testimonials.map(({ photo, quote, name, role }) => (
             <div
               key={name}
-              className="p-8 rounded-2xl flex gap-6 items-start"
+              className="p-6 md:p-8 rounded-2xl flex gap-4 md:gap-6 items-start"
               style={{
                 background: 'rgba(255,255,255,0.04)',
                 border: '1px solid rgba(255,255,255,0.07)',
               }}
             >
-              <div className={`${photo} photo w-16 h-16 rounded-full flex-shrink-0`} />
+              <div className={`${photo} photo w-12 h-12 md:w-16 md:h-16 rounded-full flex-shrink-0`} />
               <div>
-                <p className="text-base leading-relaxed text-white/80 mb-4">{quote}</p>
+                <p className="text-sm md:text-base leading-relaxed text-white/80 mb-3 md:mb-4">{quote}</p>
                 <p className="text-sm font-semibold">{name}</p>
                 <p className="text-xs text-white/35">{role}</p>
               </div>
@@ -80,8 +80,8 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Right: tall photo */}
-        <div className="test-photo-4 photo rounded-2xl" style={{ minHeight: 480 }} />
+        {/* Right: tall photo — hidden on mobile */}
+        <div className="hidden md:block test-photo-4 photo rounded-2xl" style={{ minHeight: 480 }} />
       </div>
     </section>
   )

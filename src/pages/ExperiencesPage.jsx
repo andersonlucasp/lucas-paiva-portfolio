@@ -53,12 +53,12 @@ export default function ExperiencesPage() {
     <div className="bg-bg text-white min-h-screen">
 
       {/* ── Header ────────────────────────────────────────────────── */}
-      <section className="px-16 pt-40 pb-24" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+      <section className="px-5 pt-28 pb-16 md:px-16 md:pt-40 md:pb-24" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
         <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-8">
           // Experience
         </p>
-        <div className="grid grid-cols-[1fr_1fr] gap-20 items-start">
-          <h1 className="text-[clamp(64px,9vw,120px)] font-bold leading-[0.88] tracking-tightest uppercase">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8 md:gap-20 items-start">
+          <h1 className="text-[clamp(48px,9vw,120px)] font-bold leading-[0.88] tracking-tightest uppercase">
             LUCAS
             <br />
             PAIVA
@@ -78,15 +78,15 @@ export default function ExperiencesPage() {
       </section>
 
       {/* ── Selected Experience ───────────────────────────────────── */}
-      <section className="px-16 py-24">
-        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-16">
+      <section className="px-5 py-16 md:px-16 md:py-24">
+        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-10 md:mb-16">
           // Selected Experience
         </p>
         <div className="flex flex-col">
           {experiences.map((exp, i) => (
             <div
               key={i}
-              className="grid grid-cols-[280px_1fr] gap-16 py-14"
+              className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6 md:gap-16 py-10 md:py-14"
               style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
             >
               {/* Left: role + company */}
@@ -112,12 +112,12 @@ export default function ExperiencesPage() {
       </section>
 
       {/* ── Stack ─────────────────────────────────────────────────── */}
-      <section className="px-16 pb-32" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-4 pt-24">
+      <section className="px-5 pb-20 md:px-16 md:pb-32" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-4 pt-16 md:pt-24">
           // Stack
         </p>
-        <p className="text-sm text-white/30 mb-14">Software & services I use in my workflow.</p>
-        <div className="grid grid-cols-3 gap-4">
+        <p className="text-sm text-white/30 mb-10 md:mb-14">Software & services I use in my workflow.</p>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
           {stack.map(({ name, category }) => (
             <div
               key={name}

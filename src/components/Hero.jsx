@@ -19,14 +19,14 @@ export default function Hero() {
       />
 
       {/* Título — bottom left */}
-      <div className="absolute bottom-14 left-16 z-10">
+      <div className="absolute bottom-8 left-5 md:bottom-14 md:left-16 z-10">
         <p
-          className="hero-subtitle text-sm font-medium text-white/50 tracking-[0.15em] uppercase mb-3"
+          className="hero-subtitle text-xs md:text-sm font-medium text-white/50 tracking-[0.15em] uppercase mb-3"
           style={{ opacity: 0, transform: 'translateY(20px)' }}
         >
           Senior Product Designer
         </p>
-        <h1 className="text-[clamp(80px,11vw,142px)] font-bold leading-[0.88] tracking-tightest uppercase">
+        <h1 className="text-[clamp(48px,11vw,142px)] font-bold leading-[0.88] tracking-tightest uppercase">
           <span className="block overflow-hidden">
             {'LUCAS'.split('').map((l, i) => (
               <span key={i} className="hero-title-letter inline-block" style={{ opacity: 0, transform: 'translateY(100%)' }}>
@@ -44,8 +44,8 @@ export default function Hero() {
         </h1>
       </div>
 
-      {/* Texto descritivo — bottom right */}
-      <div className="absolute bottom-14 right-16 z-10 max-w-xs text-right">
+      {/* Texto descritivo — bottom right (desktop only) */}
+      <div className="hidden md:block absolute bottom-14 right-16 z-10 max-w-xs text-right">
         <p className="text-base leading-relaxed text-white/70">
           //Senior Product Designer at Itaú Unibanco — leading Design Ops and Design System for 40+ business segments across Latin America.
         </p>

@@ -9,13 +9,13 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="bg-bg-2 py-28 px-16 reveal">
+    <section id="process" className="bg-bg-2 py-16 px-5 md:py-28 md:px-16 reveal">
       <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-6">
         // How I Work
       </p>
-      <h2 className="text-[60px] font-bold tracking-tightest uppercase mb-16">MY PROCESS</h2>
+      <h2 className="text-[36px] md:text-[60px] font-bold tracking-tightest uppercase mb-10 md:mb-16">MY PROCESS</h2>
 
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
         {steps.map(({ n, title, desc }) => (
           <div
             key={n}

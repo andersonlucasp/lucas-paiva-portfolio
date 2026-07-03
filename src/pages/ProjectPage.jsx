@@ -22,7 +22,7 @@ function PasswordGate({ slug, onUnlock }) {
   }
 
   return (
-    <div className="min-h-screen bg-bg flex items-center justify-center px-6">
+    <div className="min-h-screen bg-bg flex items-center justify-center px-5 md:px-6">
       <div className="w-full max-w-sm">
         <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-4">// Acesso restrito</p>
         <h2 className="text-3xl font-bold tracking-tightest uppercase mb-2">Conteúdo protegido</h2>
@@ -109,7 +109,7 @@ export default function ProjectPage() {
         </div>
 
         {/* Breadcrumb */}
-        <div className="absolute top-10 left-10 z-10">
+        <div className="absolute top-8 left-5 md:top-10 md:left-10 z-10">
           <button
             onClick={() => navigate(-1)}
             className="text-xs font-medium text-white/40 hover:text-white transition-colors tracking-widest uppercase"
@@ -119,18 +119,18 @@ export default function ProjectPage() {
         </div>
 
         {/* Title */}
-        <div className="absolute bottom-14 left-16 z-10">
-          <span className="text-xs font-semibold tracking-[0.15em] uppercase text-white/40 mb-4 block">
+        <div className="absolute bottom-8 left-5 md:bottom-14 md:left-16 z-10">
+          <span className="text-xs font-semibold tracking-[0.15em] uppercase text-white/40 mb-3 block">
             {project.tag} · {project.year}
           </span>
-          <h1 className="text-[clamp(64px,9vw,130px)] font-bold leading-[0.88] tracking-tightest uppercase whitespace-pre-line">
+          <h1 className="text-[clamp(40px,9vw,130px)] font-bold leading-[0.88] tracking-tightest uppercase whitespace-pre-line">
             {project.title}
           </h1>
         </div>
       </section>
 
       {/* ── Overview ──────────────────────────────────────────────── */}
-      <section className="px-16 py-20 grid grid-cols-[1fr_260px] gap-20 items-stretch"
+      <section className="px-5 py-12 md:px-16 md:py-20 grid grid-cols-1 md:grid-cols-[1fr_260px] gap-10 md:gap-20 items-stretch"
         style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
         {/* Left: intro */}
         <div>
@@ -145,8 +145,8 @@ export default function ProjectPage() {
           </p>
         </div>
 
-        {/* Right: metadata — distribui verticalmente até a altura da esquerda */}
-        <div className="flex flex-col justify-between">
+        {/* Right: metadata */}
+        <div className="flex flex-row flex-wrap md:flex-col md:justify-between gap-5 md:gap-0">
           {[
             { label: 'Client', value: project.client },
             { label: 'Service', value: project.service },
@@ -163,9 +163,9 @@ export default function ProjectPage() {
       </section>
 
       {/* ── Case Study ────────────────────────────────────────────── */}
-      <section className="px-16 pb-24"
+      <section className="px-5 pb-16 md:px-16 md:pb-24"
         style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-16 pt-20">
+        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-10 pt-14 md:mb-16 md:pt-20">
           // Case Study
         </p>
         <div className="flex flex-col gap-24">
@@ -214,13 +214,13 @@ export default function ProjectPage() {
       </section>
 
       {/* ── Gallery ───────────────────────────────────────────────── */}
-      <section className="px-16 pb-28" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-10 pt-20">
+      <section className="px-5 pb-16 md:px-16 md:pb-28" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-8 pt-14 md:mb-10 md:pt-20">
           // Gallery
         </p>
 
         {/* Main image */}
-        <div className="relative rounded-2xl overflow-hidden mb-4 group" style={{ height: 480 }}>
+        <div className="relative rounded-2xl overflow-hidden mb-3 md:mb-4 group" style={{ height: 'clamp(220px, 50vw, 480px)' }}>
           <img
             src={project.gallery[activeImg] || project.gallery[0]}
             alt=""
@@ -239,15 +239,15 @@ export default function ProjectPage() {
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-3">
+        <div className="flex gap-2 md:gap-3 overflow-x-auto pb-1">
           {project.gallery.map((src, i) => (
             <button
               key={i}
               onClick={() => setActiveImg(i)}
-              className="rounded-xl overflow-hidden flex-1 transition-opacity"
-              style={{ opacity: activeImg === i ? 1 : 0.4 }}
+              className="rounded-lg md:rounded-xl overflow-hidden flex-shrink-0 transition-opacity"
+              style={{ opacity: activeImg === i ? 1 : 0.4, width: 'clamp(60px, 15vw, 100px)' }}
             >
-              <img src={src} alt="" className="w-full h-[72px] object-cover" />
+              <img src={src} alt="" className="w-full h-[52px] md:h-[72px] object-cover" />
             </button>
           ))}
         </div>
@@ -309,17 +309,17 @@ export default function ProjectPage() {
       )}
 
       {/* ── Related Projects ──────────────────────────────────────── */}
-      <section className="px-16 pb-28" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-10 pt-20">
+      <section className="px-5 pb-20 md:px-16 md:pb-28" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-8 pt-14 md:mb-10 md:pt-20">
           // Related Projects
         </p>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
           {related.map(p => (
             <Link
               key={p.slug}
               to={`/project/${p.slug}`}
               className="group relative rounded-2xl overflow-hidden"
-              style={{ height: 320 }}
+              style={{ height: 'clamp(200px, 45vw, 320px)' }}
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"

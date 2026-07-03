@@ -21,14 +21,14 @@ export default function Footer() {
   return (
     <footer className="bg-bg overflow-hidden">
       {/* Top bar */}
-      <div className="px-16 pb-8 flex items-center justify-between border-b border-white/[0.08]">
+      <div className="px-5 pb-8 md:px-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8 border-b border-white/[0.08]">
         <p className="text-sm text-white/40 max-w-md leading-relaxed">
           Designed to scale with clarity.
           <br />
           Building strategic, high-performance experiences that communicate clearly.
         </p>
 
-        <div className="flex gap-12 text-sm text-white/35">
+        <div className="flex gap-8 md:gap-12 text-sm text-white/35">
           {Object.entries(links).map(([col, items]) => (
             <div key={col}>
               <p className="text-xs font-semibold tracking-widest uppercase text-white/20 mb-3">
@@ -57,7 +57,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright bar */}
-      <div className="px-16 pb-8 -mt-6 flex items-center justify-between text-xs text-white/25">
+      <div className="px-5 md:px-16 pb-8 -mt-4 md:-mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-1 text-xs text-white/25">
         <p>© 2025 Lucas Paiva. All Rights Reserved.</p>
         <p>Designed in Figma</p>
       </div>

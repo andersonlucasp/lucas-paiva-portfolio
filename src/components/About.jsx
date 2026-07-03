@@ -6,15 +6,15 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-bg py-28 px-16 reveal">
-      <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-10">
+    <section id="about" className="bg-bg py-16 px-5 md:py-28 md:px-16 reveal">
+      <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-8 md:mb-10">
         // About Me
       </p>
 
-      <div className="grid grid-cols-2 gap-20 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-start">
         {/* Left: text */}
-        <div className="flex flex-col gap-10">
-          <p className="text-[22px] font-normal leading-[1.7] text-white/85">
+        <div className="flex flex-col gap-8 md:gap-10">
+          <p className="text-[18px] md:text-[22px] font-normal leading-[1.7] text-white/85">
             Lucas Paiva is a Senior Product Designer crafting bold,
             high-performance digital experiences for ambitious brands with
             strategic clarity and refined execution.

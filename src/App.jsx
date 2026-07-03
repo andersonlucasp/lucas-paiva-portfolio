@@ -19,6 +19,7 @@ import BlogPage from './pages/BlogPage'
 import ArticlePage from './pages/ArticlePage'
 import ProjectPage from './pages/ProjectPage'
 import ProjectsPage from './pages/ProjectsPage'
+import ExperiencesPage from './pages/ExperiencesPage'
 
 function Home() {
   useEffect(() => {
@@ -146,6 +147,7 @@ export default function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<ArticlePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/experiences" element={<ExperiencesPage />} />
           <Route path="/project/:slug" element={<ProjectPage />} />
         </Routes>
       </div>

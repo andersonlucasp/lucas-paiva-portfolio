@@ -12,7 +12,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const navItems = ['About', 'Process']
+  const navItems = ['About']
 
   return (
     <nav
@@ -55,6 +55,14 @@ export default function Navbar() {
             className={`hover:text-white transition-colors ${location.pathname === '/projects' ? 'text-white' : ''}`}
           >
             Projects
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/experiences"
+            className={`hover:text-white transition-colors ${location.pathname === '/experiences' ? 'text-white' : ''}`}
+          >
+            Experiences
           </Link>
         </li>
         {navItems.map((item) => (

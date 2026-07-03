@@ -95,8 +95,9 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile menu overlay */}
+      {menuOpen && (
       <div
-        className={`fixed inset-0 z-40 md:hidden flex flex-col px-5 pt-24 pb-10 transition-opacity duration-300 ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        className="fixed inset-0 z-40 md:hidden flex flex-col px-5 pt-24 pb-10"
         style={{ background: 'rgba(11,11,11,0.97)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)' }}
       >
         <nav className="flex flex-col gap-1 flex-1">
@@ -128,6 +129,7 @@ export default function Navbar() {
           Get Started
         </a>
       </div>
+      )}
     </>
   )
 }

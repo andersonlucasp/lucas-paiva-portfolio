@@ -5,7 +5,7 @@ import Contact from '../components/Contact'
 const experiences = [
   {
     period: '2024 — Present',
-    role: 'Senior Product Designer',
+    role: 'Design Lead',
     company: 'Itaú Unibanco',
     description: [
       'At Itaú Unibanco, the largest financial institution in Latin America, I play a central role in Design Ops, structuring processes and documentation that drive consistency and scalability across products.',

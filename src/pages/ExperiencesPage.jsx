@@ -70,13 +70,22 @@ export default function ExperiencesPage() {
             </h1>
             <div className="flex flex-col gap-5 text-base text-white/60 leading-relaxed">
               <p>
-                With 4 years of experience in UX, UI, and Product Design, I currently work at Itaú Unibanco — the largest bank in Latin America — where I contribute to large-scale digital initiatives, including the creation of a new, unified design system for 40+ business segments.
+                I believe Design and Artificial Intelligence are no longer separate disciplines. My work is focused on evolving how design is practiced by combining Design Leadership, Design Systems, DesignOps, and Generative AI to build more scalable, efficient, and high-performing design organizations.
               </p>
               <p>
-                My background spans B2B and B2C products, from financial platforms to large-scale digital services, always focusing on solving real user problems through design that's strategic, research-informed, and execution-ready. Previously, I worked at Elo, Brazil's biggest 100% national card brand, where I helped enhance user experiences and strengthen digital products. My expertise spans Design Systems, Design Ops, and accessibility, enabling teams to deliver with speed, consistency, and quality.
+                I'm currently a Design Lead at Itaú Unibanco, Latin America's largest financial institution, within the GenAI, Processes & Tools organization. I lead the Intelligence, Tools & Distribution team, driving initiatives that strengthen design at scale through governance, Design Reviews, Design QA, AI-powered tools, automation, and intelligent workflows. My focus is enabling designers to work faster, make better decisions, and deliver higher-quality experiences.
               </p>
               <p>
-                In parallel with my full-time role, I also take on freelance and consulting work — supporting product teams that need senior design expertise, a fresh perspective, or guidance to shape and ship better digital experiences.
+                My background in software development gives me a systems perspective that naturally connects Design, Product, and Engineering. Understanding how products are built influences how I design processes, tools, and experiences, making them more practical, scalable, and aligned with implementation.
+              </p>
+              <p>
+                Throughout my career, I've worked across Product Design, Design Systems, and Design Operations, helping teams scale quality, consistency, and collaboration in complex environments. Before joining Itaú, I worked at Elo, one of Brazil's leading payment companies, contributing to digital products and design initiatives across the financial services ecosystem.
+              </p>
+              <p>
+                Alongside my role at Itaú, I also work with companies through consulting engagements, helping teams adopt Generative AI, evolve their Design Systems, improve DesignOps practices, and build internal tools that increase the effectiveness of design organizations.
+              </p>
+              <p>
+                Today, my work is driven by a simple belief: the future of design isn't just about creating better interfaces. It's about building the systems, processes, and AI-powered tools that enable great design to happen consistently, at scale.
               </p>
             </div>
           </div>

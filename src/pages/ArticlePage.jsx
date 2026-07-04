@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import Footer from '../components/Footer'
+import Contact from '../components/Contact'
 
 function readTime(html = '') {
   const words = html.replace(/<[^>]+>/g, '').split(/\s+/).length
@@ -148,6 +149,7 @@ export default function ArticlePage() {
 
       </div>
     </div>
+    <Contact />
     <Footer />
   </>
   )

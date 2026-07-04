@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import Footer from '../components/Footer'
+import Contact from '../components/Contact'
 
 const experiences = [
   {
@@ -152,6 +153,7 @@ export default function ExperiencesPage() {
         </div>
       </section>
 
+      <Contact />
       <Footer />
     </div>
   )

@@ -31,7 +31,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-bg pb-16 px-5 md:pb-28 md:px-16 reveal">
+    <section id="contact" className="bg-bg pb-16 px-5 md:pb-28 md:px-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
         {/* Left */}
         <div className="flex flex-col justify-between">

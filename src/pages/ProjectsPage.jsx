@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { projects } from '../data/projects'
 import Footer from '../components/Footer'
+import Contact from '../components/Contact'
 
 export default function ProjectsPage() {
   useEffect(() => {
@@ -97,6 +98,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
+      <Contact />
       <Footer />
     </div>
   )

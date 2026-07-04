@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { getProject, getRelated } from '../data/projects'
 import Footer from '../components/Footer'
+import Contact from '../components/Contact'
 
 const PROTECTED_SLUGS = { 'itau-design-system': 'casesjobs2026' }
 const SESSION_KEY = (slug) => `unlocked_${slug}`
@@ -344,6 +345,7 @@ export default function ProjectPage() {
         </div>
       </section>
 
+      <Contact />
       <Footer />
     </div>
   )

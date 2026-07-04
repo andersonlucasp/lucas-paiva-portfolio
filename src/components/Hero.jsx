@@ -47,7 +47,7 @@ export default function Hero() {
       {/* Texto descritivo — bottom right (desktop only) */}
       <div className="hidden md:block absolute bottom-14 right-16 z-10 max-w-xs text-right">
         <p className="text-base leading-relaxed text-white/70">
-          //Senior Product Designer at Itaú Unibanco — leading Design Ops and Design System for 40+ business segments across Latin America.
+          I turn design challenges into scalable solutions, combining experience in design systems, digital products, and artificial intelligence to generate real impact for teams and businesses.
         </p>
       </div>
 

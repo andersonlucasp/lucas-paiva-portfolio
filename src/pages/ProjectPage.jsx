@@ -4,6 +4,20 @@ import { getProject, getRelated } from '../data/projects'
 import Footer from '../components/Footer'
 import Contact from '../components/Contact'
 
+const NARRATIVE = [
+  { key: 'contexto',     title: 'Context',                   question: 'What was the business scenario?' },
+  { key: 'problema',     title: 'Reframing the Problem',     question: 'What challenge needed to be redefined?' },
+  { key: 'contribuicao', title: 'My Contribution',           question: 'What strategic decisions did I lead or influence?' },
+  { key: 'descoberta',   title: 'Discovery',                 question: 'What did we learn before designing any solution?' },
+  { key: 'principios',   title: 'Strategic Principles',      question: 'What criteria guided our decisions?' },
+  { key: 'decisoes',     title: 'Leading the War Room',        question: 'How did collaboration enable the project to move forward?' },
+  { key: 'construcao',   title: 'From Principles to Platform', question: 'How did principles translate into architectural decisions?' },
+  { key: 'validacao',    title: 'Validation',                question: 'How did we reduce risks and test hypotheses?' },
+  { key: 'adocao',       title: 'Adoption',                  question: 'How did we ensure governance, scale and behavior change?' },
+  { key: 'impacto',      title: 'Impact',                    question: 'What was the effect on the business, teams, users and platform?' },
+  { key: 'aprendizados', title: 'Reflection',                question: 'What did this project change about how you think?' },
+]
+
 const PROTECTED_SLUGS = { 'itau-design-system': 'casesjobs2026' }
 const SESSION_KEY = (slug) => `unlocked_${slug}`
 
@@ -170,47 +184,54 @@ export default function ProjectPage() {
           // Case Study
         </p>
         <div className="flex flex-col gap-24">
-          {project.sections.map((s, i) => (
-            <div key={i}>
-              <div className="max-w-3xl">
-                {s.eyebrow && (
-                  <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/25 mb-3">
-                    {s.eyebrow}
+          {NARRATIVE.map((def, i) => {
+            const s = project.sections?.[def.key]
+            if (!s || (!s.content && !s.items?.length)) return null
+            const title = s.title || def.title
+            const question = s.question || def.question
+            return (
+              <div key={def.key}>
+                <div className="max-w-3xl">
+                  <p className="text-[11px] font-semibold tracking-widest uppercase text-white/20 mb-3">
+                    {String(i + 1).padStart(2, '0')}
                   </p>
+                  <h3 className="text-[28px] font-bold tracking-tightest uppercase mb-2">
+                    {title}
+                  </h3>
+                  <p className="text-sm text-white/30 mb-8 leading-relaxed">
+                    {question}
+                  </p>
+                  <div className="text-base text-white/55 leading-[1.85] flex flex-col gap-5">
+                    {s.content && s.content.split('\n\n').map((p, j) => (
+                      <p key={j}>{p}</p>
+                    ))}
+                    {s.items && (
+                      <ul className="flex flex-col gap-4 mt-1">
+                        {s.items.map((item, j) => (
+                          <li key={j} className="flex gap-3">
+                            <span className="text-white/20 shrink-0 mt-[2px]">—</span>
+                            <span>
+                              {item.label && (
+                                <span className="text-white/80 font-semibold">{item.label}</span>
+                              )}
+                              {item.label && item.text && <span className="text-white/30"> — </span>}
+                              {item.text}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {s.outro && <p className="mt-1">{s.outro}</p>}
+                  </div>
+                </div>
+                {s.image && (
+                  <div className="mt-12 rounded-2xl overflow-hidden">
+                    <img src={s.image} alt="" className="w-full h-auto" />
+                  </div>
                 )}
-                <h3 className="text-[28px] font-bold tracking-tightest uppercase mb-8">
-                  {String(i + 1).padStart(2, '0')} — {s.title}
-                </h3>
-                <div className="text-base text-white/55 leading-[1.85] flex flex-col gap-5">
-                  {s.intro && s.intro.split('\n\n').map((p, j) => (
-                    <p key={j}>{p}</p>
-                  ))}
-                  {s.items && (
-                    <ul className="flex flex-col gap-4 mt-1">
-                      {s.items.map((item, j) => (
-                        <li key={j} className="flex gap-3">
-                          <span className="text-white/20 shrink-0 mt-[2px]">—</span>
-                          <span>
-                            {item.label && (
-                              <span className="text-white/80 font-semibold">{item.label}</span>
-                            )}
-                            {item.label && item.text && <span className="text-white/30"> — </span>}
-                            {item.text}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                  {s.outro && <p className="mt-1">{s.outro}</p>}
-                </div>
               </div>
-              {s.image && (
-                <div className="mt-12 rounded-2xl overflow-hidden">
-                  <img src={s.image} alt="" className="w-full h-auto" />
-                </div>
-              )}
-            </div>
-          ))}
+            )
+          })}
         </div>
       </section>
 

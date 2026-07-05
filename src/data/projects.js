@@ -2,78 +2,77 @@ export const projects = [
   {
     slug: 'itau-design-system',
     title: 'Design System\nItaú Unibanco',
-    subtitle: 'Building a Multi-Brand Design System for Latin America\'s Largest Bank, Itaú Unibanco',
+    subtitle: 'Building the Next Generation of Itaú\'s Design System',
     tag: 'Design System',
     year: '2025',
     client: 'Itaú Unibanco',
     service: 'Design Ops',
     timeline: '12+ Months',
-    role: 'Senior Product Designer',
+    role: 'Design Lead',
     heroImage: '/img/itau/03.png',
-    intro: 'The Itaú Design System was already an important foundation for the bank, helping teams create more consistent and scalable digital experiences. But as Itaú grew, the system needed to grow too. More teams, more journeys and more complex products started to demand a stronger structure. This case is about how we redesigned that foundation to make the Design System more flexible, accessible and ready to support the next generation of digital banking.',
-    sections: [
-      {
-        title: 'The Challenge',
-        intro: 'As the largest company in Latin America, with over 99,000 employees and more than 40 business segments, Itaú Unibanco faced a complex challenge: multiple design systems coexisted within the organization, each with its own standards, visual languages, and technical limitations.\n\nThe official Ops team\'s design system presented friction points, inconsistencies, and bugs that slowed down product delivery and reduced brand cohesion.\n\nKey challenges included:',
-        items: [
-          { label: 'Fragmented design ecosystem', text: 'Inconsistent components, visual patterns, and interaction models across segments created disjointed user experiences.' },
-          { label: 'Multiple brands and styles', text: 'Beyond Itaú\'s flagship brand, the system needed to support over 40 segments, each with its own colors, curves, and visual identity requirements.' },
-          { label: 'Scalability concerns', text: 'Existing solutions lacked the flexibility and governance needed to scale across such a diverse ecosystem.' },
-          { label: 'Technical debt', text: 'Outdated code and component structures hindered performance, accessibility, and maintainability.' },
-          { label: 'Lack of unified governance', text: 'Without a single source of truth, teams faced duplicated work, slower delivery, and inconsistent quality.' },
-        ],
+    intro: 'Designing the platform that enables hundreds of teams to build consistent digital experiences across Latin America\'s largest bank.',
+    sections: {
+      contexto: {
+        content: 'For years, Itaú\'s Design System played a fundamental role in standardizing digital experiences across the organization. It provided designers and engineers with a common language that accelerated product development and improved consistency.\n\nBut as the bank evolved, so did its complexity.\n\nMore than 40 business segments, hundreds of product teams and multiple brands were now building experiences with different needs, priorities and levels of maturity. Over time, parallel solutions emerged, governance became fragmented and maintaining consistency became increasingly difficult.\n\nThe challenge was no longer updating components.\n\nIt was redesigning the platform that supported digital product creation across one of the largest organizations in Latin America.',
+        image: '/img/itau/01.webp',
       },
-      {
-        title: 'My Role',
-        intro: 'I worked as a Senior Product Designer within the core team responsible for shaping the next generation of Itaú\'s Design System.\n\nMy biggest contribution was facilitating the collaborative process that aligned designers, stakeholders and specialists around a shared vision.\n\nMy responsibilities included:',
+      problema: {
+        content: 'At first glance, the project looked like a Design System redesign.\n\nVery quickly, we realized it wasn\'t.\n\nThe real challenge wasn\'t visual consistency.\n\nIt was organizational scalability.\n\nHow could hundreds of designers and engineers create products independently while still delivering one coherent experience?\n\nThat question changed the entire direction of the project.\n\nInstead of redesigning a component library, we started redesigning the system behind the system.\n\nThe Design System would become a product, complete with governance, documentation, adoption strategies and continuous evolution.',
+      },
+      contribuicao: {
+        content: 'As a Senior Product Designer on the core Design System team, I helped shape both the product strategy and the collaboration model behind the new platform.\n\nMy work extended beyond component design.\n\nI connected Design, Engineering, Accessibility and Business perspectives, facilitated strategic decision-making and helped transform fragmented discussions into shared direction.',
         items: [
-          { text: 'Planning and facilitating a multi-day Design Sprint (War Room)' },
-          { text: 'Synthesizing inputs from different business segments' },
-          { text: 'Defining visual foundations and design principles' },
-          { text: 'Supporting multi-brand architecture decisions' },
-          { text: 'Aligning accessibility, brand and product requirements' },
-          { text: 'Helping establish governance and adoption strategies' },
-          { text: 'Driving decision-making between competing stakeholder needs' },
+          { text: 'Defining strategic foundations for a scalable multi-brand Design System.' },
+          { text: 'Facilitating alignment across multiple business units and disciplines.' },
+          { text: 'Contributing to governance, documentation and adoption strategies.' },
+          { text: 'Supporting the evolution of the Design System architecture alongside designers and engineers.' },
+          { text: 'Leading a cross-functional Design System War Room that fundamentally changed how the team collaborated and accelerated delivery.' },
         ],
-        outro: 'The result will be a future-proof, single source of truth that will enable teams to deliver faster, more consistent, and higher-quality digital experiences across all Itaú Unibanco products and brands.',
+        outro: 'Rather than focusing on isolated deliverables, my role centered on helping teams make better decisions together.',
         image: '/img/itau/08.png',
       },
-      {
-        eyebrow: 'First Steps',
-        title: 'Strategy',
-        intro: 'To address these challenges, we approached the creation of Itaú Unibanco\'s new design system through three strategic pillars:',
-        items: [
-          { label: 'Scalability Across Brands and Segments', text: 'We developed a flexible architecture capable of supporting more than 40 business segments, each with its own colors, curves, and brand identity. This modular approach allows teams to apply unique visual languages while maintaining consistency in structure, accessibility, and performance.' },
-          { label: 'Governance and Operational Efficiency', text: 'We established clear governance guidelines, component documentation, and adoption processes to ensure that all squads could work from a single source of truth. This framework reduced duplicated efforts, improved communication between teams, and accelerated delivery cycles.' },
-          { label: 'Consistency in Design and User Experience', text: 'By defining standardized UI patterns, visual tokens, and reusable components, we eliminated inconsistencies across products and brands. This not only reinforced Itaú\'s visual identity but also improved usability, reduced cognitive load for users, and streamlined long-term maintenance.' },
-        ],
-        image: '/img/itau/itau03.avif',
-      },
-      {
-        eyebrow: 'Outcomes',
-        title: 'Research & Discovery',
-        intro: 'To deeply understand the needs of both the business and the design teams, we began with a series of conversations with stakeholders, managers, and directors from multiple bank segments. These discussions helped map current challenges, expectations, and priorities for the new design system.\n\nWe also mapped leading companies recognized for their design systems such as Spotify, Airbnb, Google, Apple, and Uber to extract best practices and inspiration for our project.\n\nNext, we brought together designers from different squads and the Ops team for two days of co-creation sessions. Through collaborative activities and the use of illustrative bento layouts, we explored possibilities, validated ideas, and defined the visual patterns that would guide component design.\n\nThis process ensured that the foundations of the new system were not only aligned with the bank\'s recent rebranding but also tailored to the practical needs of the teams who would use it daily — making it scalable and grounded in real operational contexts.',
+      descoberta: {
+        content: 'Before proposing solutions, we needed to understand where complexity actually existed.\n\nOur discovery combined stakeholder interviews, workshops with designers from multiple business units, benchmark studies, documentation reviews, support requests and internal feedback collected across the organization.\n\nRather than evaluating components individually, we investigated how teams interacted with the Design System throughout their daily work.\n\nThe findings revealed that the biggest problems weren\'t visual.\n\nTeams struggled with fragmented governance, duplicated decisions, inconsistent documentation and a lack of shared standards.\n\nThe Design System wasn\'t failing because of its components.\n\nIt was struggling because the organization had outgrown the way it was built.',
         image: '/img/itau/itau04.avif',
       },
-      {
-        eyebrow: 'The Final Result',
-        title: 'Impact & Results',
-        intro: 'To address the fragmentation and scalability challenges, we developed a unified and scalable design system for Itaú Unibanco that supports over 40 distinct business segments and brand identities.\n\nBy creating a modular architecture with standardized components, visual tokens, and flexible theming capabilities, teams across the bank can now build consistent interfaces rapidly without reinventing patterns or compromising on accessibility and performance.\n\nThis harmonization drastically reduced duplicated efforts and design inconsistencies, enabling faster delivery cycles and improving overall product quality.\n\nKey results include:',
+      principios: {
+        content: 'The insights gathered during discovery were distilled into five Design Drivers that became the foundation for every subsequent decision.',
         items: [
-          { label: '+60%', text: 'reduction in design and development time for new features and product launches due to reusable components and clear documentation.' },
-          { label: '+50%', text: 'increase in cross-team collaboration efficiency, as squads now share a single source of truth and governance framework.' },
-          { label: '+40%', text: 'improvement in accessibility compliance scores across audited products, ensuring inclusive user experiences.' },
-          { label: '100%', text: 'of segments now receive a consistent brand experience, aligning visual language and interaction patterns despite varied brand identities.' },
-          { text: 'Significant reduction in maintenance overhead, with centralized updates propagating to all products seamlessly, saving hundreds of developer hours monthly.' },
+          { label: 'Adaptable', text: 'Support different contexts, devices and interaction models.' },
+          { label: 'Customizable', text: 'Enable multiple brands and business segments without sacrificing consistency.' },
+          { label: 'Fluid', text: 'Create seamless experiences across products and journeys.' },
+          { label: 'Essential', text: 'Reduce complexity by prioritizing clarity and usability.' },
+          { label: 'Accessible', text: 'Build inclusive experiences by default, following WCAG standards and supporting zoom levels up to 200%.' },
         ],
-        outro: 'This strategic investment in design system modernization has empowered Itaú Unibanco\'s teams to innovate faster while delivering higher quality and more cohesive digital experiences across its vast ecosystem.',
+        outro: 'These principles weren\'t visual guidelines. They became our framework for making design decisions throughout the project.',
+      },
+      decisoes: {
+        content: 'Midway through the project, a different challenge emerged.\n\nComponent development had fallen nearly three months behind the roadmap, and every sprint increased the gap between planning and execution.\n\nThe problem wasn\'t productivity.\n\nIt was collaboration.\n\nTeams were working independently, dependencies were accumulating and decisions that should have taken minutes often required days of asynchronous communication between squads.\n\nRather than accepting the delay as inevitable, I proposed and facilitated a multi-day Design System War Room.\n\nWe brought together the designers responsible for the system\'s most critical components into one dedicated workspace, replacing isolated execution with real-time collaboration.\n\nInstead of optimizing individual outputs, we optimized how the team made decisions.\n\nQuestions that previously circulated across multiple squads for days were resolved face to face within minutes.\n\nDesign decisions became collective. Dependencies disappeared. Knowledge spread naturally across the team.\n\nThe outcome went far beyond accelerating component production.\n\nThe project moved from being three months behind schedule to finishing three months ahead of the original roadmap, effectively recovering six months simply by changing the way the team worked.\n\nFor me, this became one of the most valuable lessons of the entire project.\n\nSometimes the biggest opportunity isn\'t redesigning the product.\n\nIt\'s redesigning the collaboration around it.',
+        image: '/img/itau/itau07.avif',
+      },
+      construcao: {
+        content: 'With strategic direction established and collaboration realigned, we translated the Design Drivers into a scalable platform.\n\nMulti-brand support led us to rethink the token architecture.\n\nAccessibility influenced typography, spacing and component behavior from the earliest explorations.\n\nGovernance became part of the product itself through documentation standards, contribution guidelines and shared workflows.\n\nRather than creating a new visual language, we built an infrastructure capable of supporting continuous evolution.',
+        image: '/img/itau/itau03.avif',
+      },
+      validacao: {
+        content: 'Every major decision was continuously validated with Design, Engineering and Product teams using realistic product scenarios.\n\nInstead of validating components in isolation, we evaluated how the system behaved across complex journeys, dense interfaces, accessibility requirements and multiple brand contexts.\n\nThis iterative process reduced implementation uncertainty while increasing confidence before large-scale adoption.',
+      },
+      adocao: {
+        content: 'A Design System only creates value when people actually use it.\n\nFor that reason, adoption was considered part of the product from the very beginning.\n\nWe established governance practices, documentation standards, contribution models and collaborative rituals that supported teams throughout the transition.\n\nThe goal wasn\'t simply to publish a new library.\n\nIt was to create a shared platform that designers and engineers could trust as the foundation for every digital product.',
+      },
+      impacto: {
+        items: [
+          { label: 'Business', text: 'Created a scalable Design System capable of supporting more than 40 business segments under a unified architectural foundation.' },
+          { label: 'Teams', text: 'Reduced fragmentation by establishing shared governance, reusable patterns and a common language across Design and Engineering. The Design System War Room also transformed team collaboration, enabling the project to recover six months against the original roadmap through a new collaborative delivery model.' },
+          { label: 'User Experience', text: 'Enabled more consistent, accessible and cohesive experiences across Itaú\'s digital ecosystem while preparing products for future growth.' },
+          { label: 'Platform', text: 'Established the technical and organizational foundation for continuous evolution, including scalable documentation, multi-brand support and AI-assisted workflows.' },
+        ],
         image: '/img/itau/itau06.avif',
       },
-      {
-        title: 'Final Thoughts',
-        intro: 'This design system project was not just about creating a modern UI—it was about fostering a unified culture across diverse business segments, empowering internal teams with scalable tools, and ensuring compliance with global accessibility standards.\n\nThe success of this initiative demonstrates that delivering consistent, inclusive, and high-quality digital experiences at scale requires not only cutting-edge technology but also deep understanding of brand diversity and operational realities.\n\nBy balancing innovation with governance and collaboration, Itaú Unibanco is positioned to lead the market with a design system that truly supports its vast and varied ecosystem.',
+      aprendizados: {
+        content: 'Before this project, I believed the success of a Design System depended primarily on the quality of its components.\n\nThis experience fundamentally changed my perspective.\n\nI now see Design Systems as organizational products.\n\nTheir success depends as much on governance, collaboration and decision-making as it does on visual consistency or technical implementation.\n\nLeading the Design System War Room reinforced another lesson that continues to shape my work today.\n\nThe biggest design challenges are not always found in the interface.\n\nSometimes they\'re found in the way teams communicate, collaborate and make decisions.\n\nHelping redesign that process became just as impactful as designing the system itself.',
       },
-    ],
+    },
     gallery: [
       '/img/itau/itau01.avif',
       '/img/itau/itau02.avif',
@@ -84,10 +83,11 @@ export const projects = [
       '/img/itau/itau08.avif',
     ],
   },
+
   {
     slug: 'elo-redesign',
     title: 'Elo Website\nRedesign',
-    subtitle: 'Redesigning Brazil\'s Leading Payment Brand for the Digital Age',
+    subtitle: 'Rebuilding Elo\'s Digital Platform',
     tag: 'UX / Web Design',
     year: '2023',
     client: 'Elo',
@@ -95,67 +95,72 @@ export const projects = [
     timeline: '4 Months',
     role: 'Product Designer',
     heroImage: '/img/elo/03.png',
-    intro: 'Elo is one of Brazil\'s largest payment brands, operating across millions of cardholders and merchants. Despite its strong brand presence, the existing website received frequent feedback describing the experience as a true "patchwork." It lacked consistency and visual standards, and with every redirect, users felt as if they were navigating a completely different site rather than Elo\'s own platform.',
-    sections: [
-      {
-        title: 'The Challenge',
-        intro: 'Despite Elo\'s strong brand presence, the existing website received frequent feedback describing the experience as a true "patchwork." It lacked consistency and visual standards, and with every redirect, users felt as if they were navigating a completely different site rather than Elo\'s own platform.\n\nKey challenges included:',
-        items: [
-          { label: 'Fragmented user experience', text: 'Cardholders were not completing registration flows or promotional campaign journeys, raising questions like: Why are users not finishing these journeys? Why are campaigns not converting?' },
-          { label: 'Low campaign conversion', text: 'The website\'s structure made it difficult for customers to find categories, reducing engagement and participation in promotions.' },
-          { label: 'Lack of intuitiveness', text: 'Navigation was not intuitive, creating friction in the user journey and lowering overall satisfaction.' },
-          { label: 'Limited autonomy', text: 'Marketing teams lacked the ability to update content independently, relying heavily on developers for even minor changes.' },
-          { label: 'Inefficient processes', text: 'There was no clear governance or agile flow for content updates, slowing down campaign launches and adjustments.' },
-          { label: 'Inconsistencies in design and delivery', text: 'The absence of clear standards led to inconsistent interfaces, impacting both brand perception and quality across touchpoints.' },
-        ],
+    intro: 'Transforming a fragmented website into a scalable platform for one of Brazil\'s leading payment brands.',
+    sections: {
+      contexto: {
+        content: 'Elo is one of Brazil\'s largest payment companies, connecting millions of cardholders, merchants and financial institutions through a broad portfolio of products and services.\n\nWhile the brand had established a strong market presence, its digital experience told a different story.\n\nOver time, the website had grown through independent initiatives, campaign launches and incremental updates. Although each change solved an immediate business need, together they created an increasingly fragmented experience that was difficult to navigate, difficult to maintain and difficult to scale.\n\nThe challenge wasn\'t simply to redesign a website.\n\nIt was to rebuild the digital platform behind one of Brazil\'s most recognized payment brands.',
+        image: '/img/elo/01.png',
       },
-      {
-        title: 'My Role',
-        intro: 'As the product designer leading the Elo website redesign, I collaborated closely with the scrum master, data scientists, customer service teams, fellow designers, and developers to ensure a cohesive and data-driven approach to the project.\n\nIn addition to managing the end-to-end UX strategy and design execution, I also engaged in direct negotiations with the CMO, explaining the complexities of the transition and why the site could not simply be relaunched overnight due to the existence of more than 150 pages that required careful migration and testing.\n\nMy responsibilities included:',
+      problema: {
+        content: 'The project initially started as a website redesign.\n\nHowever, early research revealed that the interface itself wasn\'t the real problem.\n\nUsers struggled to complete key journeys, frequently felt lost after navigating between pages and often described the experience as if they were visiting multiple unrelated websites instead of a single Elo platform.\n\nInternally, the situation was equally complex.\n\nMarketing teams relied heavily on engineering for simple content updates, campaign launches were slower than they needed to be, and maintaining consistency across more than 150 pages had become increasingly difficult.\n\nThe challenge was no longer about improving usability.\n\nIt was about reducing the operational complexity behind the experience.',
+      },
+      contribuicao: {
+        content: 'As the Product Designer leading the redesign initiative, I worked across design, product, engineering, marketing and executive leadership to redefine how Elo\'s digital platform should evolve.\n\nRather than focusing exclusively on interface design, my role centered on aligning business goals, technical constraints and user needs into a scalable product strategy.',
         items: [
-          { text: 'Aligning business, product, and brand priorities across multiple teams' },
-          { text: 'Designing intuitive navigation flows and scalable UI components' },
-          { text: 'Using data insights to drive decisions and validate design improvements' },
-          { text: 'Advocating for a phased approach to ensure quality and minimize risks' },
-          { text: 'Presenting progress and outcomes to stakeholders, balancing business needs with technical and design constraints' },
+          { text: 'Leading the experience strategy for the new platform.' },
+          { text: 'Redesigning the information architecture across more than 150 pages.' },
+          { text: 'Defining a modular interface system that improved consistency and scalability.' },
+          { text: 'Facilitating alignment between Product, Engineering, Marketing and Customer Support.' },
+          { text: 'Partnering directly with executive leadership to plan a phased migration strategy that balanced business urgency with implementation complexity.' },
         ],
+        outro: 'Beyond designing interfaces, I helped shape the platform\'s long-term direction.',
         image: '/img/elo/02.png',
       },
-      {
-        eyebrow: 'First Steps',
-        title: 'Strategy',
-        intro: 'To address these challenges, we approached the Elo website redesign through three strategic pillars:',
-        items: [
-          { label: 'Autonomy for Marketing Teams', text: 'We restructured the platform to allow marketing teams to update content independently, without relying on developers for every change. This shift empowered the teams to launch and adjust campaigns faster, responding to market needs in real time.' },
-          { label: 'Efficiency in Processes', text: 'We implemented a clear governance model and streamlined workflows to make content updates more agile. This ensured that campaign launches and adjustments could be executed with greater speed and control, improving operational efficiency across teams.' },
-          { label: 'Consistency Across Interfaces', text: 'By establishing standardized UI patterns and scalable components, we reduced design inconsistencies and strengthened the brand\'s visual identity. This approach not only improved the user experience but also simplified maintenance, ensuring long-term quality in all digital touchpoints.' },
-        ],
-        image: '/img/elo/04.png',
-      },
-      {
-        eyebrow: 'Outcomes',
-        title: 'Research & Discovery',
-        intro: 'To gain a deep understanding of our cardholders, I conducted research and interviews using an interactive prototype we envisioned as a potential solution to the existing problems.\n\nThrough these sessions, we uncovered valuable insights into what users truly expected from the platform and how they perceived its navigability. These findings guided us in refining the information architecture, simplifying navigation flows, and aligning the experience with real user needs.',
+      descoberta: {
+        content: 'Before redesigning the experience, we focused on understanding why users were abandoning critical journeys.\n\nOur research combined qualitative interviews, interactive prototype testing, behavioral analytics, customer support insights and stakeholder workshops.\n\nLooking at the problem from both customer and operational perspectives allowed us to uncover two structural issues.\n\nThe first was a confusing information architecture that made navigation unpredictable and increased journey abandonment.\n\nThe second was an operational model that prevented the platform from evolving efficiently, making even small content updates dependent on engineering resources.\n\nUnderstanding these constraints fundamentally changed the direction of the project.',
         image: '/img/elo/05.png',
       },
-      {
-        eyebrow: 'The Final Result',
-        title: 'Impact & Results',
-        intro: 'To solve the navigation issues and lack of clarity in the user journey, we restructured the Elo website with a modular architecture based on cards, categories, and dynamic banners.\n\nBy organizing content into clear and explicit categories, cardholders could immediately understand where they were being redirected, reducing confusion and friction during navigation. The use of cards as modular elements allowed us to establish a consistent visual language across the site, while dynamic banners provided flexibility for the marketing team to effectively highlight campaigns and offers.\n\nThis approach not only improved the user experience but also optimized content management, enabling the marketing team to update and reorganize sections quickly without compromising visual consistency.\n\nKey results include:',
+      principios: {
+        content: 'The insights gathered during discovery evolved into four principles that guided every design decision throughout the project.',
         items: [
-          { label: '+45%', text: 'increase in journey completions.' },
-          { label: '+38%', text: 'increase in new card requests.' },
-          { label: '+35%', text: 'increase in performance score (from 72 to 97).' },
-          { label: '+58%', text: 'increase in accessibility score (from 60 to 95).' },
-          { label: '+34%', text: 'increase in SEO optimization (from 68 to 91).' },
+          { label: 'Clarity', text: 'Users should always understand where they are, where they\'re going and what happens next.' },
+          { label: 'Autonomy', text: 'Marketing teams should be able to manage campaigns and content without depending on engineering.' },
+          { label: 'Consistency', text: 'Every interaction should feel like part of the same Elo experience, regardless of the entry point.' },
+          { label: 'Scalability', text: 'The platform should become easier to evolve as new products, campaigns and services were introduced.' },
         ],
+        outro: 'These principles became our decision framework throughout the redesign.',
+      },
+      decisoes: {
+        title: 'From Principles to Product Decisions',
+        question: 'How did principles shape the product decisions?',
+        content: 'Every major product decision was evaluated against these principles.\n\nTo improve clarity, we completely restructured the information architecture, grouping content into more intuitive categories and simplifying navigation paths.\n\nTo increase consistency, we introduced a modular interface built around reusable cards, shared UI patterns and flexible content blocks.\n\nTo improve operational autonomy, the platform was redesigned to support CMS-driven content management, allowing marketing teams to publish and update campaigns independently.\n\nRather than designing individual pages, we were designing a platform capable of continuous evolution.',
+        image: '/img/elo/04.png',
+      },
+      construcao: {
+        title: 'Building the Platform',
+        question: 'How did the platform evolve throughout the project?',
+        content: 'Over four months, we redesigned more than 150 pages while creating a scalable digital foundation for future growth.\n\nEvery design decision balanced three perspectives simultaneously: user experience, operational efficiency and business performance.\n\nInstead of optimizing isolated screens, we focused on creating a system that could support new campaigns, products and content without compromising consistency or maintainability.',
         image: '/img/elo/06.png',
       },
-      {
-        title: 'Final Thoughts',
-        intro: 'This redesign wasn\'t just about improving the UI — it was about respecting cultural context, empowering internal teams, and meeting global accessibility standards. The success of the project proved that hospitality online must be as thoughtful and inclusive as it is in person, and that regional understanding is essential to global scale.',
+      validacao: {
+        content: 'Design concepts were continuously validated through interactive prototypes and user testing.\n\nBehavioral insights helped us refine navigation patterns, improve content hierarchy and reduce friction across the platform\'s most important journeys.\n\nThis iterative process ensured that design decisions were driven by evidence rather than assumptions.',
       },
-    ],
+      adocao: {
+        content: 'Launching the redesigned website was only part of the transformation.\n\nEqually important was ensuring the platform could continue evolving after launch.\n\nBy restructuring the content model and simplifying governance, marketing teams gained significantly more autonomy to manage campaigns without relying on engineering for routine updates.\n\nThe result was a platform that became easier to maintain, faster to evolve and more sustainable over time.',
+      },
+      impacto: {
+        items: [
+          { label: 'Business', text: 'Significantly improved the performance of Elo\'s most important customer journeys — +45% increase in journey completion and +38% increase in new card applications.' },
+          { label: 'User Experience', text: 'Clearer information architecture and more consistent navigation reduced friction across the customer journey while strengthening users\' perception of a unified Elo experience.' },
+          { label: 'Platform', text: 'The new modular architecture simplified maintenance and enabled faster content updates across the organization.' },
+          { label: 'Technical Quality', text: '+35% Performance (72 → 97) · +58% Accessibility (60 → 95) · +34% SEO (68 → 91)' },
+        ],
+        image: '/img/elo/07.png',
+      },
+      aprendizados: {
+        content: 'This project reinforced one of the most important lessons in my career.\n\nUser experience problems rarely begin at the interface.\n\nMore often, they emerge from decisions about information architecture, governance, operational processes and technology.\n\nBy treating the website as a product platform rather than a collection of pages, we improved not only the customer experience, but also the way internal teams could build, maintain and evolve the product over time.\n\nThat perspective continues to shape how I approach product design today.',
+      },
+    },
     gallery: [
       '/img/elo/01.png',
       '/img/elo/02.png',
@@ -166,10 +171,11 @@ export const projects = [
       '/img/elo/07.png',
     ],
   },
+
   {
     slug: 'sukinho-rebranding',
     title: 'Sukinho\nRebranding',
-    subtitle: 'Rebranding a Natural Juice Brand Across Physical and Digital Touchpoints',
+    subtitle: 'From Shelf to Screen',
     tag: 'Branding',
     year: '2023',
     client: 'Sukinho',
@@ -177,68 +183,72 @@ export const projects = [
     timeline: '3 Months',
     role: 'Product Designer',
     heroImage: '/img/sukinho/02.png',
-    intro: 'In 2023, I co-led the rebranding of Sukinho, a natural juice brand looking to refresh its identity and strengthen its connection with consumers. What made this project special was the challenge of balancing two worlds at once: the physical space, with redesigned product labels, and the digital space, with Instagram assets that carried the same identity online.\n\nFinding a visual language that worked both on the shelf and in the feed wasn\'t easy, but the collaborative, duo-led process made it exciting. Through research, testing, and countless iterations, we built a solution that blended freshness, clarity, and authenticity — exactly what the brand wanted to convey.\n\nThe result was a cohesive, vibrant identity that gave each flavor its own personality while reinforcing Sukinho\'s healthy, transparent, and approachable character.',
-    sections: [
-      {
-        title: 'The Challenge',
-        intro: 'Sukinho, a natural juice brand, needed a rebranding that could bring freshness, authenticity, and transparency to both its packaging and digital presence. The main challenge was to redesign the juice labels, differentiating each flavor while making nutritional information more accessible and trustworthy. In addition, the project required the creation of social media assets for Instagram, ensuring the brand\'s new visual identity would be consistent across physical and digital touchpoints.\n\nKey challenges included:',
-        items: [
-          { text: 'Modernize the packaging design without losing the artisanal feel.' },
-          { text: 'Create visual differentiation between flavors while maintaining a unified language.' },
-          { text: 'Make nutritional values more visible to strengthen consumer trust.' },
-          { text: 'Reposition the brand as healthy, fresh, and contemporary.' },
-        ],
+    intro: 'Building a scalable brand system that unified Sukinho\'s physical and digital experience.',
+    sections: {
+      contexto: {
+        content: 'Consumer expectations around healthy food and beverages have changed significantly over the past few years.\n\nPeople no longer choose products based only on flavor or price. They also evaluate transparency, ingredient quality and whether a brand feels authentic.\n\nSukinho recognized this shift.\n\nWhile the product already reflected these values, its visual identity no longer did.\n\nThe packaging lacked differentiation between flavors, nutritional information competed for attention and the brand\'s digital communication had evolved independently from its physical products.\n\nThe challenge wasn\'t simply to redesign the packaging.\n\nIt was to create a scalable brand system capable of delivering one consistent experience across every customer touchpoint, from supermarket shelves to digital channels.',
+        image: '/img/sukinho/01.png',
       },
-      {
-        title: 'My Role',
-        intro: 'I worked side by side with my design partner, collaborating on every stage of the process — from research to concept to final execution. This teamwork was essential to balance different creative perspectives and deliver consistent, innovative visual solutions.\n\nMy responsibilities included:',
+      problema: {
+        content: 'At first, the project seemed like a traditional rebranding initiative.\n\nBut research quickly revealed a much broader challenge.\n\nConsumers don\'t spend minutes evaluating juice packaging.\n\nThey spend seconds.\n\nDuring those few seconds, they answer three simple questions:\n\nWhat is it?\n\nCan I trust it?\n\nIs this the flavor I\'m looking for?\n\nThose questions completely changed how we approached the project.\n\nInstead of focusing on visual expression alone, we focused on reducing cognitive effort during decision-making.\n\nThe challenge was no longer to create more attractive labels.\n\nIt was to design a product experience that communicated clearly, consistently and confidently wherever customers encountered the brand.',
+      },
+      contribuicao: {
+        content: 'I co-led the project alongside another Product Designer, collaborating throughout discovery, concept development, production and implementation.\n\nRather than dividing responsibilities, we worked together to define the visual strategy, challenge assumptions and refine every design decision as a team.',
         items: [
-          { text: 'Leading the visual direction for the rebranding with my partner, defining moodboards and core design principles tied to freshness, transparency, and trust.' },
-          { text: 'Designing the label system for multiple flavors: layout grid, information hierarchy, color mapping per flavor, and supporting iconography.' },
-          { text: 'Structuring the nutritional-information architecture to maximize clarity and legibility (type scale, spacing, and small-print constraints).' },
-          { text: 'Building reusable packaging components and rules (label templates, color tokens, typography specs) to keep consistency across SKUs and sizes.' },
-          { text: 'Prototyping and evaluating label alternatives (quick shelf mockups and preference tests) and translating feedback into iterative design improvements.' },
-          { text: 'Preparing production-ready files and spec sheets (dielines, bleeds, color callouts, materials/finishes) and coordinating a clean handoff to stakeholders.' },
-          { text: 'Designing Instagram post templates and assets to extend the new identity into digital channels.' },
-          { text: 'Documenting decisions and assembling a lightweight brand kit for marketing and vendor alignment.' },
+          { text: 'Defining the strategic visual direction for the rebrand.' },
+          { text: 'Designing a scalable packaging system across multiple SKUs.' },
+          { text: 'Reorganizing information hierarchy to improve readability and consumer trust.' },
+          { text: 'Creating reusable design principles for typography, colors, iconography and layout.' },
+          { text: 'Extending the visual language into digital assets for Instagram and marketing campaigns.' },
+          { text: 'Preparing production-ready specifications and implementation guidelines.' },
         ],
-        outro: 'The result was a set of beautifully crafted labels that not only modernized Sukinho\'s visual identity but also created a stronger emotional connection with consumers. Each flavor gained its own distinct character while staying true to the brand\'s essence, and the clear nutritional information responded directly to what users were asking for — transparency, freshness, and trust.',
+        outro: 'More than designing packaging, my focus was creating a system that could evolve consistently over time.',
         image: '/img/sukinho/03.png',
       },
-      {
-        eyebrow: 'First Steps',
-        title: 'Strategy',
-        intro: 'We started with market analysis and visual research of competitors in the healthy beverage segment. We also gathered consumer insights to understand decision-making at the point of purchase: clarity of information and flavor differentiation emerged as top priorities.\n\nBased on this, we defined three strategic pillars for the rebranding:',
+      descoberta: {
+        content: 'Before designing anything, we wanted to understand how consumers actually interacted with beverage packaging.\n\nOur research combined competitor analysis, visual benchmarking and consumer insights focused on purchasing behavior.\n\nRather than asking what people found visually attractive, we investigated how they made decisions in front of a supermarket shelf.\n\nOne insight stood out immediately.\n\nConsumers weren\'t looking for more information.\n\nThey were looking for clearer information.\n\nFlavor recognition, nutritional transparency and ingredient communication all influenced purchasing decisions within just a few seconds.\n\nThis shifted our design priorities from decoration to communication.',
+      },
+      principios: {
+        content: 'The redesign was guided by four principles that informed every design decision throughout the project.',
         items: [
-          { label: 'Clarity', text: 'Ensure quick readability of flavors and nutritional values.' },
-          { label: 'Differentiation', text: 'Give each flavor a unique identity through colors and icons.' },
-          { label: 'Consistency', text: 'Maintain cohesion across all products to strengthen brand recognition.' },
+          { label: 'Clarity', text: 'The most important information should be understood immediately. Flavor names, nutritional values and product hierarchy should never compete for attention.' },
+          { label: 'Transparency', text: 'Healthy products rely on trust. Nutritional information became a central element of the experience instead of secondary content.' },
+          { label: 'Recognition', text: 'Every flavor deserved its own personality while remaining unmistakably part of the Sukinho family.' },
+          { label: 'Scalability', text: 'The identity needed to expand naturally across future products, campaigns and digital channels without losing consistency.' },
         ],
+        outro: 'Rather than acting as visual guidelines, these principles became our framework for every design decision.',
+      },
+      decisoes: {
+        title: 'From Principles to System',
+        question: 'How did principles translate into a design system?',
+        content: 'Instead of approaching each package as an isolated design exercise, we built a modular packaging system.\n\nWe established:\n\nA flexible layout grid.\nA clear information hierarchy.\nSemantic color mapping for each flavor.\nReusable iconography.\nTypography and spacing rules.\nProduction specifications for different package formats.\n\nThis allowed every new SKU to inherit the same visual language while maintaining its own identity.\n\nThe objective wasn\'t simply consistency.\n\nIt was reducing future design complexity.',
         image: '/img/sukinho/07.png',
       },
-      {
-        eyebrow: 'Outcomes',
-        title: 'Research & Discovery',
-        intro: 'As a duo, we conducted creative exploration sessions focusing on color palettes, typography, and information hierarchy. We prototyped different label layouts, testing variations that balanced visual appeal with practical functionality.\n\nResearch highlighted that transparency was a key consumer demand. This insight led us to reposition nutritional information as a central design element and use vibrant colors directly linked to natural ingredients, making the labels more intuitive and attractive.',
+      construcao: {
+        title: 'Beyond the Shelf',
+        question: 'How did the identity extend beyond packaging?',
+        content: 'One of the project\'s biggest opportunities was ensuring the identity extended beyond packaging itself.\n\nCustomers shouldn\'t experience one Sukinho on a supermarket shelf and another on Instagram.\n\nThe same design language needed to work naturally across every interaction.\n\nTo achieve this, we translated the packaging system into reusable digital assets for social media and marketing campaigns.\n\nTypography, colors, hierarchy and graphic elements became shared building blocks across physical and digital touchpoints.\n\nRather than creating separate assets for different channels, we designed one cohesive brand ecosystem.',
         image: '/img/sukinho/05.png',
       },
-      {
-        eyebrow: 'The Final Result',
-        title: 'Impact & Results',
-        intro: 'The rebranding delivered a modern, vibrant, and consumer-focused identity. Each flavor gained its own personality while the overall design reinforced Sukinho\'s position as a healthy and trustworthy brand.\n\nKey results include:',
+      validacao: {
+        content: 'Throughout the project we explored multiple visual directions through rapid iterations, packaging mockups and collaborative design reviews.\n\nEvaluating concepts in realistic shelf scenarios helped us understand how visual hierarchy, color differentiation and information architecture influenced product recognition.\n\nRather than selecting the most visually appealing direction, we selected the solution that communicated most effectively under real-world conditions.',
+      },
+      adocao: {
+        content: 'The project didn\'t end with the launch of the new packaging.\n\nTo support future growth, we documented reusable templates, production specifications, typography rules, color standards and digital assets.\n\nThis enabled future product launches, seasonal campaigns and new communication materials to remain consistent without redesigning the system from scratch.\n\nThe outcome wasn\'t simply a refreshed identity.\n\nIt was a scalable framework for the brand\'s future evolution.',
+      },
+      impacto: {
         items: [
-          { text: 'Clear and attractive labels, making flavor selection easier at the point of sale.' },
-          { text: 'Nutritional information in the spotlight, boosting transparency and consumer trust.' },
-          { text: 'New color palette and iconography, bringing differentiation and freshness to each flavor.' },
-          { text: 'A unified visual system, strengthening Sukinho\'s recognition as a modern healthy brand.' },
+          { label: 'Brand', text: 'Repositioned Sukinho as a fresher, healthier and more contemporary brand while reinforcing its values of transparency and authenticity.' },
+          { label: 'Customer Experience', text: 'Improved flavor recognition, increased readability and strengthened trust through clearer nutritional communication, making purchase decisions faster and more intuitive.' },
+          { label: 'Marketing', text: 'Created a reusable visual language that unified packaging, Instagram content and future campaigns under one consistent identity.' },
+          { label: 'System', text: 'Established a scalable packaging system capable of supporting future products while maintaining consistency across the entire portfolio.' },
         ],
         image: '/img/sukinho/06.png',
       },
-      {
-        title: 'Final Thoughts',
-        intro: 'This project was particularly special because of the collaboration. Working in partnership throughout every stage allowed us to combine perspectives, explore diverse ideas, and create a stronger, more creative outcome.\n\nThe Sukinho rebranding not only refreshed the brand visually but also brought its core values closer to what consumers value most: clarity, freshness, and trust.',
+      aprendizados: {
+        content: 'This project fundamentally changed how I think about branding.\n\nToday, I don\'t see branding as a collection of visual assets.\n\nI see it as a system that helps people understand, trust and recognize products across every interaction.\n\nOne of the biggest lessons was realizing that information architecture doesn\'t belong only to digital products.\n\nA supermarket shelf is also an interface.\n\nProducts compete for attention.\n\nInformation competes for visibility.\n\nEvery design decision influences confidence before a customer ever picks up the product.\n\nThat systems-thinking mindset continues to influence how I approach every project today, whether I\'m designing a Design System, a digital platform or a physical product experience.',
       },
-    ],
+    },
     gallery: [
       '/img/sukinho/01.png',
       '/img/sukinho/03.png',

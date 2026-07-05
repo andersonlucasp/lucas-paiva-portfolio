@@ -4,16 +4,16 @@ const projects = [
   {
     cls: 'proj-2',
     slug: 'elo-redesign',
-    tag: 'UX / Web Design',
-    title: 'Elo Website Redesign',
-    year: '2023',
+    tag: 'Digital Product',
+    title: 'Rebuilding Elo',
+    year: 'Transforming a digital platform',
   },
   {
     cls: 'proj-3',
     slug: 'sukinho-rebranding',
-    tag: 'Branding',
-    title: 'Sukinho Rebranding',
-    year: '2023',
+    tag: 'Brand Experience',
+    title: 'From Shelf to Screen',
+    year: 'Designing a scalable brand system',
   },
 ]
 
@@ -64,14 +64,14 @@ export default function Work() {
             style={{ background: 'linear-gradient(to bottom,rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.65) 100%)' }}
           />
           <div className="absolute top-4 left-4 md:top-6 md:left-6">
-            <span className="px-3 py-1.5 rounded-full text-xs font-semibold" style={{ background: 'rgba(255,255,255,0.15)' }}>
+            <span className="px-3 py-1.5 rounded-full text-xs font-semibold" style={{ background: 'rgba(11,11,11,0.65)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.12)' }}>
               Design System
             </span>
           </div>
           <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-4 md:p-6 rounded-b-2xl" style={glassPanel}>
             <div>
-              <p className="text-base md:text-[20px] font-bold leading-tight">Design System Itaú Unibanco</p>
-              <p className="text-xs md:text-sm text-white/50 mt-1">2025 · Product Designer</p>
+              <p className="text-base md:text-[20px] font-bold leading-tight">The Next Generation</p>
+              <p className="text-xs md:text-sm text-white/50 mt-1">Building Itaú's Design System</p>
             </div>
             <span className="text-sm text-white/0 group-hover:text-white/70 transition-all duration-300 translate-x-2 group-hover:translate-x-0 shrink-0 ml-4">
               View →
@@ -89,7 +89,7 @@ export default function Work() {
               style={{ height: 'clamp(160px,40vw,460px)' }}
             >
               <div className="absolute top-3 left-3 md:top-5 md:left-5">
-                <span className="px-2.5 py-1 md:px-3 md:py-1.5 rounded-full text-[10px] md:text-xs font-semibold" style={{ background: 'rgba(255,255,255,0.15)' }}>
+                <span className="px-2.5 py-1 md:px-3 md:py-1.5 rounded-full text-[10px] md:text-xs font-semibold" style={{ background: 'rgba(11,11,11,0.65)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.12)' }}>
                   {tag}
                 </span>
               </div>

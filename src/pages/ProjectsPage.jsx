@@ -46,15 +46,15 @@ export default function ProjectsPage() {
           />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%)' }} />
           <div className="absolute top-5 left-5 md:top-8 md:left-8">
-            <span className="px-3 py-1.5 rounded-full text-xs font-semibold" style={{ background: 'rgba(255,255,255,0.15)' }}>
-              {main.tag}
+            <span className="px-3 py-1.5 rounded-full text-xs font-semibold" style={{ background: 'rgba(11,11,11,0.65)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.12)' }}>
+              {main.cardCategory || main.tag}
             </span>
           </div>
           <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 flex items-end justify-between">
             <div>
-              <p className="text-xs font-semibold tracking-widest uppercase text-white/40 mb-2 md:mb-3">{main.year}</p>
+              <p className="text-xs font-semibold tracking-widest uppercase text-white/40 mb-2 md:mb-3">{main.cardSubtitle || main.year}</p>
               <h2 className="text-[clamp(24px,4vw,56px)] font-bold leading-tight tracking-tightest uppercase whitespace-pre-line">
-                {main.title}
+                {main.cardTitle || main.title}
               </h2>
             </div>
             <span className="hidden md:inline text-sm text-white/40 group-hover:text-white transition-colors shrink-0 ml-8 mb-2">
@@ -73,20 +73,24 @@ export default function ProjectsPage() {
               style={{ height: 'clamp(220px, 45vw, 480px)' }}
             >
               <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: `url(${p.heroImage})` }}
+                className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+                style={{
+                  backgroundImage: `url(${p.heroImage})`,
+                  backgroundSize: p.cardImgSize || 'cover',
+                  backgroundPosition: p.cardImgPosition || 'center',
+                }}
               />
               <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.45)' }} />
               <div className="absolute top-5 left-5 md:top-7 md:left-7">
-                <span className="px-3 py-1.5 rounded-full text-xs font-semibold" style={{ background: 'rgba(255,255,255,0.15)' }}>
-                  {p.tag}
+                <span className="px-3 py-1.5 rounded-full text-xs font-semibold" style={{ background: 'rgba(11,11,11,0.65)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.12)' }}>
+                  {p.cardCategory || p.tag}
                 </span>
               </div>
               <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8 flex items-end justify-between">
                 <div>
-                  <p className="text-xs font-semibold tracking-widest uppercase text-white/40 mb-2">{p.year}</p>
+                  <p className="text-xs font-semibold tracking-widest uppercase text-white/40 mb-2">{p.cardSubtitle || p.year}</p>
                   <h2 className="text-[22px] md:text-[28px] font-bold leading-tight tracking-tightest uppercase whitespace-pre-line">
-                    {p.title}
+                    {p.cardTitle || p.title}
                   </h2>
                 </div>
                 <span className="hidden md:inline text-sm text-white/40 group-hover:text-white transition-colors shrink-0 ml-6 mb-1">

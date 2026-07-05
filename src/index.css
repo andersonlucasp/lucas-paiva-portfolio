@@ -94,8 +94,8 @@ body {
 }
 .proj-2 {
   background-image: url("/img/elo/03.png");
-  background-size: cover;
-  background-position: center 70%;
+  background-size: 130%;
+  background-position: center 40%;
   background-color: #0b0b0b;
 }
 .proj-3 {

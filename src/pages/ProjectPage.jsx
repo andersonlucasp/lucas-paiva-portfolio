@@ -135,7 +135,10 @@ export default function ProjectPage() {
 
         {/* Title */}
         <div className="absolute bottom-8 left-5 md:bottom-14 md:left-16 z-10">
-          <span className="text-xs font-semibold tracking-[0.15em] uppercase text-white/40 mb-3 block">
+          <span
+            className="inline-block px-3 py-1.5 rounded-full text-xs font-semibold tracking-[0.12em] uppercase mb-4"
+            style={{ background: 'rgba(11,11,11,0.65)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.12)' }}
+          >
             {project.tag} · {project.year}
           </span>
           <h1 className="text-[clamp(40px,9vw,130px)] font-bold leading-[0.88] tracking-tightest uppercase whitespace-pre-line">
@@ -180,10 +183,7 @@ export default function ProjectPage() {
       {/* ── Case Study ────────────────────────────────────────────── */}
       <section className="px-5 pb-16 md:px-16 md:pb-24"
         style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-white/30 mb-10 pt-14 md:mb-16 md:pt-20">
-          // Case Study
-        </p>
-        <div className="flex flex-col gap-24">
+        <div className="flex flex-col gap-24 pt-14 md:pt-20">
           {NARRATIVE.map((def, i) => {
             const s = project.sections?.[def.key]
             if (!s || (!s.content && !s.items?.length)) return null

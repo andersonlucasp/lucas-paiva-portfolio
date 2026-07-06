@@ -12,12 +12,12 @@ export const projects = [
     service: 'Design Ops',
     timeline: '12+ Months',
     role: 'Design Lead',
-    heroImage: '/img/itau/03.png',
+    heroImage: '/img/itau-designSystem/itau03.png',
     intro: 'Designing the platform that enables hundreds of teams to build consistent digital experiences across Latin America\'s largest bank.',
     sections: {
       contexto: {
         content: 'For years, Itaú\'s Design System played a fundamental role in standardizing digital experiences across the organization. It provided designers and engineers with a common language that accelerated product development and improved consistency.\n\nBut as the bank evolved, so did its complexity.\n\nMore than 40 business segments, hundreds of product teams and multiple brands were now building experiences with different needs, priorities and levels of maturity. Over time, parallel solutions emerged, governance became fragmented and maintaining consistency became increasingly difficult.\n\nThe challenge was no longer updating components.\n\nIt was redesigning the platform that supported digital product creation across one of the largest organizations in Latin America.',
-        image: '/img/itau/01.webp',
+        image: '/img/itau-designSystem/itau02.png',
       },
       problema: {
         content: 'At first glance, the project looked like a Design System redesign.\n\nVery quickly, we realized it wasn\'t.\n\nThe real challenge wasn\'t visual consistency.\n\nIt was organizational scalability.\n\nHow could hundreds of designers and engineers create products independently while still delivering one coherent experience?\n\nThat question changed the entire direction of the project.\n\nInstead of redesigning a component library, we started redesigning the system behind the system.\n\nThe Design System would become a product, complete with governance, documentation, adoption strategies and continuous evolution.',
@@ -32,11 +32,11 @@ export const projects = [
           { text: 'Leading a cross-functional Design System War Room that fundamentally changed how the team collaborated and accelerated delivery.' },
         ],
         outro: 'Rather than focusing on isolated deliverables, my role centered on helping teams make better decisions together.',
-        image: '/img/itau/08.png',
+        image: '/img/itau-designSystem/mycontribution.png',
       },
       descoberta: {
         content: 'Before proposing solutions, we needed to understand where complexity actually existed.\n\nOur discovery combined stakeholder interviews, workshops with designers from multiple business units, benchmark studies, documentation reviews, support requests and internal feedback collected across the organization.\n\nRather than evaluating components individually, we investigated how teams interacted with the Design System throughout their daily work.\n\nThe findings revealed that the biggest problems weren\'t visual.\n\nTeams struggled with fragmented governance, duplicated decisions, inconsistent documentation and a lack of shared standards.\n\nThe Design System wasn\'t failing because of its components.\n\nIt was struggling because the organization had outgrown the way it was built.',
-        image: '/img/itau/itau04.avif',
+        image: '/img/itau-designSystem/discovery.png',
       },
       principios: {
         content: 'The insights gathered during discovery were distilled into five Design Drivers that became the foundation for every subsequent decision.',
@@ -48,14 +48,15 @@ export const projects = [
           { label: 'Accessible', text: 'Build inclusive experiences by default, following WCAG standards and supporting zoom levels up to 200%.' },
         ],
         outro: 'These principles weren\'t visual guidelines. They became our framework for making design decisions throughout the project.',
+        image: '/img/itau-designSystem/itau03.png',
       },
       decisoes: {
         content: 'Midway through the project, a different challenge emerged.\n\nComponent development had fallen nearly three months behind the roadmap, and every sprint increased the gap between planning and execution.\n\nThe problem wasn\'t productivity.\n\nIt was collaboration.\n\nTeams were working independently, dependencies were accumulating and decisions that should have taken minutes often required days of asynchronous communication between squads.\n\nRather than accepting the delay as inevitable, I proposed and facilitated a multi-day Design System War Room.\n\nWe brought together the designers responsible for the system\'s most critical components into one dedicated workspace, replacing isolated execution with real-time collaboration.\n\nInstead of optimizing individual outputs, we optimized how the team made decisions.\n\nQuestions that previously circulated across multiple squads for days were resolved face to face within minutes.\n\nDesign decisions became collective. Dependencies disappeared. Knowledge spread naturally across the team.\n\nThe outcome went far beyond accelerating component production.\n\nThe project moved from being three months behind schedule to finishing three months ahead of the original roadmap, effectively recovering six months simply by changing the way the team worked.\n\nFor me, this became one of the most valuable lessons of the entire project.\n\nSometimes the biggest opportunity isn\'t redesigning the product.\n\nIt\'s redesigning the collaboration around it.',
-        image: '/img/itau/itau07.avif',
+        image: '/img/itau-designSystem/leadingWarroom.png',
       },
       construcao: {
         content: 'With strategic direction established and collaboration realigned, we translated the Design Drivers into a scalable platform.\n\nMulti-brand support led us to rethink the token architecture.\n\nAccessibility influenced typography, spacing and component behavior from the earliest explorations.\n\nGovernance became part of the product itself through documentation standards, contribution guidelines and shared workflows.\n\nRather than creating a new visual language, we built an infrastructure capable of supporting continuous evolution.',
-        image: '/img/itau/itau03.avif',
+        image: '/img/itau-designSystem/itau01.png',
       },
       validacao: {
         content: 'Every major decision was continuously validated with Design, Engineering and Product teams using realistic product scenarios.\n\nInstead of validating components in isolation, we evaluated how the system behaved across complex journeys, dense interfaces, accessibility requirements and multiple brand contexts.\n\nThis iterative process reduced implementation uncertainty while increasing confidence before large-scale adoption.',
@@ -70,20 +71,25 @@ export const projects = [
           { label: 'User Experience', text: 'Enabled more consistent, accessible and cohesive experiences across Itaú\'s digital ecosystem while preparing products for future growth.' },
           { label: 'Platform', text: 'Established the technical and organizational foundation for continuous evolution, including scalable documentation, multi-brand support and AI-assisted workflows.' },
         ],
-        image: '/img/itau/itau06.avif',
+        images: [
+          '/img/itau-designSystem/itau05.png',
+          '/img/itau-designSystem/itau06.png',
+          '/img/itau-designSystem/itau07.png',
+          '/img/itau-designSystem/itau08.png',
+        ],
       },
       aprendizados: {
         content: 'Before this project, I believed the success of a Design System depended primarily on the quality of its components.\n\nThis experience fundamentally changed my perspective.\n\nI now see Design Systems as organizational products.\n\nTheir success depends as much on governance, collaboration and decision-making as it does on visual consistency or technical implementation.\n\nLeading the Design System War Room reinforced another lesson that continues to shape my work today.\n\nThe biggest design challenges are not always found in the interface.\n\nSometimes they\'re found in the way teams communicate, collaborate and make decisions.\n\nHelping redesign that process became just as impactful as designing the system itself.',
       },
     },
     gallery: [
-      '/img/itau/itau01.avif',
-      '/img/itau/itau02.avif',
-      '/img/itau/itau03.avif',
-      '/img/itau/itau04.avif',
-      '/img/itau/itau06.avif',
-      '/img/itau/itau07.avif',
-      '/img/itau/itau08.avif',
+      '/img/itau-designSystem/itau01.png',
+      '/img/itau-designSystem/itau02.png',
+      '/img/itau-designSystem/itau03.png',
+      '/img/itau-designSystem/itau05.png',
+      '/img/itau-designSystem/itau06.png',
+      '/img/itau-designSystem/itau07.png',
+      '/img/itau-designSystem/itau08.png',
     ],
   },
 

@@ -229,6 +229,15 @@ export default function ProjectPage() {
                     <img src={s.image} alt="" className="w-full h-auto" />
                   </div>
                 )}
+                {s.images && (
+                  <div className="mt-12 flex flex-col gap-4">
+                    {s.images.map((src, j) => (
+                      <div key={j} className="rounded-2xl overflow-hidden">
+                        <img src={src} alt="" className="w-full h-auto" />
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             )
           })}

@@ -203,7 +203,7 @@ export const projects = [
     sections: {
       contexto: {
         content: 'Consumer expectations around healthy food and beverages have changed significantly over the past few years.\n\nPeople no longer choose products based only on flavor or price. They also evaluate transparency, ingredient quality and whether a brand feels authentic.\n\nSukinho recognized this shift.\n\nWhile the product already reflected these values, its visual identity no longer did.\n\nThe packaging lacked differentiation between flavors, nutritional information competed for attention and the brand\'s digital communication had evolved independently from its physical products.\n\nThe challenge wasn\'t simply to redesign the packaging.\n\nIt was to create a scalable brand system capable of delivering one consistent experience across every customer touchpoint, from supermarket shelves to digital channels.',
-        image: '/img/sukinho/01.png',
+        image: '/img/sukinho/03.png',
       },
       problema: {
         content: 'At first, the project seemed like a traditional rebranding initiative.\n\nBut research quickly revealed a much broader challenge.\n\nConsumers don\'t spend minutes evaluating juice packaging.\n\nThey spend seconds.\n\nDuring those few seconds, they answer three simple questions:\n\nWhat is it?\n\nCan I trust it?\n\nIs this the flavor I\'m looking for?\n\nThose questions completely changed how we approached the project.\n\nInstead of focusing on visual expression alone, we focused on reducing cognitive effort during decision-making.\n\nThe challenge was no longer to create more attractive labels.\n\nIt was to design a product experience that communicated clearly, consistently and confidently wherever customers encountered the brand.',
@@ -219,10 +219,13 @@ export const projects = [
           { text: 'Preparing production-ready specifications and implementation guidelines.' },
         ],
         outro: 'More than designing packaging, my focus was creating a system that could evolve consistently over time.',
-        image: '/img/sukinho/03.png',
       },
       descoberta: {
         content: 'Before designing anything, we wanted to understand how consumers actually interacted with beverage packaging.\n\nOur research combined competitor analysis, visual benchmarking and consumer insights focused on purchasing behavior.\n\nRather than asking what people found visually attractive, we investigated how they made decisions in front of a supermarket shelf.\n\nOne insight stood out immediately.\n\nConsumers weren\'t looking for more information.\n\nThey were looking for clearer information.\n\nFlavor recognition, nutritional transparency and ingredient communication all influenced purchasing decisions within just a few seconds.\n\nThis shifted our design priorities from decoration to communication.',
+        images: [
+          '/img/sukinho/07.png',
+          '/img/sukinho/04.png',
+        ],
       },
       principios: {
         content: 'The redesign was guided by four principles that informed every design decision throughout the project.',
@@ -238,13 +241,13 @@ export const projects = [
         title: 'From Principles to System',
         question: 'How did principles translate into a design system?',
         content: 'Instead of approaching each package as an isolated design exercise, we built a modular packaging system.\n\nWe established:\n\nA flexible layout grid.\nA clear information hierarchy.\nSemantic color mapping for each flavor.\nReusable iconography.\nTypography and spacing rules.\nProduction specifications for different package formats.\n\nThis allowed every new SKU to inherit the same visual language while maintaining its own identity.\n\nThe objective wasn\'t simply consistency.\n\nIt was reducing future design complexity.',
-        image: '/img/sukinho/07.png',
+        image: '/img/sukinho/05.png',
       },
       construcao: {
         title: 'Beyond the Shelf',
         question: 'How did the identity extend beyond packaging?',
         content: 'One of the project\'s biggest opportunities was ensuring the identity extended beyond packaging itself.\n\nCustomers shouldn\'t experience one Sukinho on a supermarket shelf and another on Instagram.\n\nThe same design language needed to work naturally across every interaction.\n\nTo achieve this, we translated the packaging system into reusable digital assets for social media and marketing campaigns.\n\nTypography, colors, hierarchy and graphic elements became shared building blocks across physical and digital touchpoints.\n\nRather than creating separate assets for different channels, we designed one cohesive brand ecosystem.',
-        image: '/img/sukinho/05.png',
+        image: '/img/sukinho/01.png',
       },
       validacao: {
         content: 'Throughout the project we explored multiple visual directions through rapid iterations, packaging mockups and collaborative design reviews.\n\nEvaluating concepts in realistic shelf scenarios helped us understand how visual hierarchy, color differentiation and information architecture influenced product recognition.\n\nRather than selecting the most visually appealing direction, we selected the solution that communicated most effectively under real-world conditions.',

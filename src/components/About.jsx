@@ -15,14 +15,10 @@ export default function About() {
         {/* Left: text */}
         <div className="flex flex-col gap-8 md:gap-10">
           <p className="text-[18px] md:text-[22px] font-normal leading-[1.7] text-white/85">
-            Lucas Paiva is a Senior Product Designer crafting bold,
-            high-performance digital experiences for ambitious brands with
-            strategic clarity and refined execution.
+            I'm a Product Designer passionate about scaling design through Design Systems, DesignOps, and Artificial Intelligence. I build the platforms, processes, and intelligent workflows that help teams create better digital products with greater speed, consistency, and quality.
           </p>
           <p className="text-base leading-[1.8] text-white/45">
-            Currently leading Design Ops and Design System initiatives at Itaú
-            Unibanco — the largest company in Latin America — transforming how
-            40+ business segments deliver value through design.
+            Currently leading DesignOps and Design System initiatives at Itaú Unibanco, I'm helping more than 40 business segments scale design through governance, AI-powered tools, and operational excellence.
           </p>
 
           {/* Stats */}

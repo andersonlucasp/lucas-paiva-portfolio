@@ -108,12 +108,12 @@ export const projects = [
     service: 'UX Design · Web Design',
     timeline: '4 Months',
     role: 'Product Designer',
-    heroImage: '/img/elo/03.png',
+    heroImage: '/img/elo/Hero.png',
     intro: 'Transforming a fragmented website into a scalable platform for one of Brazil\'s leading payment brands.',
     sections: {
       contexto: {
         content: 'Elo is one of Brazil\'s largest payment companies, connecting millions of cardholders, merchants and financial institutions through a broad portfolio of products and services.\n\nWhile the brand had established a strong market presence, its digital experience told a different story.\n\nOver time, the website had grown through independent initiatives, campaign launches and incremental updates. Although each change solved an immediate business need, together they created an increasingly fragmented experience that was difficult to navigate, difficult to maintain and difficult to scale.\n\nThe challenge wasn\'t simply to redesign a website.\n\nIt was to rebuild the digital platform behind one of Brazil\'s most recognized payment brands.',
-        image: '/img/elo/01.png',
+        image: '/img/elo/problem.png',
       },
       problema: {
         content: 'The project initially started as a website redesign.\n\nHowever, early research revealed that the interface itself wasn\'t the real problem.\n\nUsers struggled to complete key journeys, frequently felt lost after navigating between pages and often described the experience as if they were visiting multiple unrelated websites instead of a single Elo platform.\n\nInternally, the situation was equally complex.\n\nMarketing teams relied heavily on engineering for simple content updates, campaign launches were slower than they needed to be, and maintaining consistency across more than 150 pages had become increasingly difficult.\n\nThe challenge was no longer about improving usability.\n\nIt was about reducing the operational complexity behind the experience.',
@@ -128,11 +128,11 @@ export const projects = [
           { text: 'Partnering directly with executive leadership to plan a phased migration strategy that balanced business urgency with implementation complexity.' },
         ],
         outro: 'Beyond designing interfaces, I helped shape the platform\'s long-term direction.',
-        image: '/img/elo/02.png',
+        image: '/img/elo/rebranding.png',
       },
       descoberta: {
         content: 'Before redesigning the experience, we focused on understanding why users were abandoning critical journeys.\n\nOur research combined qualitative interviews, interactive prototype testing, behavioral analytics, customer support insights and stakeholder workshops.\n\nLooking at the problem from both customer and operational perspectives allowed us to uncover two structural issues.\n\nThe first was a confusing information architecture that made navigation unpredictable and increased journey abandonment.\n\nThe second was an operational model that prevented the platform from evolving efficiently, making even small content updates dependent on engineering resources.\n\nUnderstanding these constraints fundamentally changed the direction of the project.',
-        image: '/img/elo/05.png',
+        image: '/img/elo/discovery.png',
       },
       principios: {
         content: 'The insights gathered during discovery evolved into four principles that guided every design decision throughout the project.',
@@ -148,13 +148,13 @@ export const projects = [
         title: 'From Principles to Product Decisions',
         question: 'How did principles shape the product decisions?',
         content: 'Every major product decision was evaluated against these principles.\n\nTo improve clarity, we completely restructured the information architecture, grouping content into more intuitive categories and simplifying navigation paths.\n\nTo increase consistency, we introduced a modular interface built around reusable cards, shared UI patterns and flexible content blocks.\n\nTo improve operational autonomy, the platform was redesigned to support CMS-driven content management, allowing marketing teams to publish and update campaigns independently.\n\nRather than designing individual pages, we were designing a platform capable of continuous evolution.',
-        image: '/img/elo/04.png',
+        image: '/img/elo/solutionModules.png',
       },
       construcao: {
         title: 'Building the Platform',
         question: 'How did the platform evolve throughout the project?',
         content: 'Over four months, we redesigned more than 150 pages while creating a scalable digital foundation for future growth.\n\nEvery design decision balanced three perspectives simultaneously: user experience, operational efficiency and business performance.\n\nInstead of optimizing isolated screens, we focused on creating a system that could support new campaigns, products and content without compromising consistency or maintainability.',
-        image: '/img/elo/06.png',
+        image: '/img/elo/applyingTheModules.png',
       },
       validacao: {
         content: 'Design concepts were continuously validated through interactive prototypes and user testing.\n\nBehavioral insights helped us refine navigation patterns, improve content hierarchy and reduce friction across the platform\'s most important journeys.\n\nThis iterative process ensured that design decisions were driven by evidence rather than assumptions.',
@@ -169,20 +169,19 @@ export const projects = [
           { label: 'Platform', text: 'The new modular architecture simplified maintenance and enabled faster content updates across the organization.' },
           { label: 'Technical Quality', text: '+35% Performance (72 → 97) · +58% Accessibility (60 → 95) · +34% SEO (68 → 91)' },
         ],
-        image: '/img/elo/07.png',
+        image: '/img/elo/beforeAfter.png',
       },
       aprendizados: {
         content: 'This project reinforced one of the most important lessons in my career.\n\nUser experience problems rarely begin at the interface.\n\nMore often, they emerge from decisions about information architecture, governance, operational processes and technology.\n\nBy treating the website as a product platform rather than a collection of pages, we improved not only the customer experience, but also the way internal teams could build, maintain and evolve the product over time.\n\nThat perspective continues to shape how I approach product design today.',
       },
     },
     gallery: [
-      '/img/elo/01.png',
-      '/img/elo/02.png',
-      '/img/elo/03.png',
-      '/img/elo/04.png',
-      '/img/elo/05.png',
-      '/img/elo/06.png',
-      '/img/elo/07.png',
+      '/img/elo/rebranding.png',
+      '/img/elo/problem.png',
+      '/img/elo/discovery.png',
+      '/img/elo/solutionModules.png',
+      '/img/elo/applyingTheModules.png',
+      '/img/elo/beforeAfter.png',
     ],
   },
 

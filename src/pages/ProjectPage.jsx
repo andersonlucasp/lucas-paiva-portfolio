@@ -357,13 +357,17 @@ export default function ProjectPage() {
                 style={{ backgroundImage: `url(${p.heroImage})` }}
               />
               <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.5)' }} />
-              <div className="absolute inset-0 p-8 flex flex-col justify-between">
-                <span className="text-xs font-semibold tracking-widest uppercase text-white/50">
-                  {p.tag} · {p.year}
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
+                <span
+                  className="self-start px-3 py-1.5 rounded-full text-xs font-semibold"
+                  style={{ background: 'rgba(11,11,11,0.65)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.12)' }}
+                >
+                  {p.cardCategory || p.tag}
                 </span>
                 <div>
+                  <p className="text-xs text-white/40 mb-2">{p.cardSubtitle || p.year}</p>
                   <h3 className="text-[28px] font-bold tracking-tightest uppercase leading-tight whitespace-pre-line">
-                    {p.title}
+                    {p.cardTitle || p.title}
                   </h3>
                   <p className="text-sm text-white/40 mt-2 group-hover:text-white transition-colors">
                     View project →

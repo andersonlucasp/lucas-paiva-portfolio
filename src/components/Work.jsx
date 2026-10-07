@@ -15,6 +15,13 @@ const projects = [
     title: 'From Shelf to Screen',
     year: 'Designing a scalable brand system',
   },
+  {
+    cls: 'proj-4',
+    slug: 'taskall',
+    tag: 'taskALL',
+    title: 'Do funcionar ao fazer sentido',
+    year: '2026',
+  },
 ]
 
 const glassPanel = {
@@ -80,13 +87,13 @@ export default function Work() {
         </Link>
 
         {/* Side cards */}
-        <div className="flex flex-row md:flex-col gap-4 md:w-[360px]">
+        <div className="flex flex-col gap-4 md:w-[360px]">
           {projects.map(({ cls, slug, tag, title, year }) => (
             <Link
               key={cls}
               to={`/project/${slug}`}
               className={`${cls} relative rounded-2xl overflow-hidden group flex-1`}
-              style={{ height: 'clamp(160px,40vw,460px)' }}
+              style={{ minHeight: '132px' }}
             >
               <div className="absolute top-3 left-3 md:top-5 md:left-5">
                 <span className="px-2.5 py-1 md:px-3 md:py-1.5 rounded-full text-[10px] md:text-xs font-semibold" style={{ background: 'rgba(11,11,11,0.65)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.12)' }}>

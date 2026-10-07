@@ -139,9 +139,9 @@ export default function ProjectPage() {
             className="inline-block px-3 py-1.5 rounded-full text-xs font-semibold tracking-[0.12em] uppercase mb-4"
             style={{ background: 'rgba(11,11,11,0.65)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.12)' }}
           >
-            {project.tag} · {project.year}
+            {[project.tag, project.year].filter(Boolean).join(' · ')}
           </span>
-          <h1 className="text-[clamp(40px,9vw,130px)] font-bold leading-[0.88] tracking-tightest uppercase whitespace-pre-line">
+          <h1 className={`font-bold tracking-tightest uppercase whitespace-pre-line ${project.titleClass || 'text-[clamp(40px,9vw,130px)] leading-[0.88]'}`}>
             {project.title}
           </h1>
         </div>
@@ -171,7 +171,7 @@ export default function ProjectPage() {
             { label: 'Year', value: project.year },
             { label: 'Timeline', value: project.timeline },
             ...(project.role ? [{ label: 'Role', value: project.role }] : []),
-          ].map(({ label, value }, i) => (
+          ].filter(item => item.value).map(({ label, value }, i) => (
             <div key={label} style={{ borderTop: i === 0 ? 'none' : '1px solid rgba(255,255,255,0.08)', paddingTop: i === 0 ? 0 : '14px' }}>
               <p className="text-xs font-semibold tracking-widest uppercase text-white/25 mb-1">{label}</p>
               <p className="text-sm text-white/70">{value}</p>

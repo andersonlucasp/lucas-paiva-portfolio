@@ -11,12 +11,14 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-anchor: none;
 }
 body {
   background: #0b0b0b;
   color: #fff;
   font-family: "Space Grotesk", sans-serif;
   overflow-x: hidden;
+  overflow-anchor: none;
 }
 
 /* Ghost text */

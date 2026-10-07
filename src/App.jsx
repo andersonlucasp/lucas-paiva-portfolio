@@ -97,23 +97,6 @@ function Home() {
       },
     })
 
-    // Work: sobe de baixo + fade in (por cima do hero sticky)
-    gsap.fromTo('#work',
-      { y: 80, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        ease: 'none',
-        immediateRender: false,
-        scrollTrigger: {
-          trigger: '#work',
-          start: 'top 85%',
-          end: 'top 30%',
-          scrub: 0.8,
-        },
-      }
-    )
-
     return () => {
       observer.disconnect()
       ScrollTrigger.getAll().forEach(t => t.kill())

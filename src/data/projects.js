@@ -313,9 +313,7 @@ export const projects = [
         ],
         outro: 'Consistency and minimalist aesthetics scored lowest. The drivers: clarity before completeness, a system instead of a collection of sections, every block earning its place, the call to action visible throughout the journey. That map led to the next request.',
         images: [
-          '/img/taskall/resumo.png',
-          '/img/taskall/heuristicas.png',
-          '/img/taskall/hero-achados.png',
+          '/img/taskall/design-critique.png',
         ],
       },
       contribuicao: {

@@ -292,7 +292,7 @@ export const projects = [
     service: 'Critique, Design System and Redesign',
     timeline: '3 Phases',
     role: 'Product Designer',
-    heroImage: '/img/taskall/cover.png',
+    heroImage: '/img/taskall/home-hero.png',
     intro: "A product built with AI solves 'working' fast. What it lacked was making sense.",
     sections: {
       contexto: {
@@ -346,7 +346,7 @@ export const projects = [
         ],
         outro: "Every platform page repeats the same skeleton: hero, overview, features, other platforms and the demo request. People choose their path from the menu instead of scrolling through everything.",
         images: [
-          '/img/taskall/antes-hero.png',
+          '/img/taskall/antes-full.png',
           '/img/taskall/home-hero.png',
           '/img/taskall/escola-hero.png',
           '/img/taskall/estudantes-hero.png',
@@ -378,7 +378,7 @@ export const projects = [
       '/img/taskall/resumo.png',
       '/img/taskall/heuristicas.png',
       '/img/taskall/hero-achados.png',
-      '/img/taskall/antes-hero.png',
+      '/img/taskall/antes-full.png',
       '/img/taskall/home-hero.png',
       '/img/taskall/escola-hero.png',
       '/img/taskall/estudantes-hero.png',

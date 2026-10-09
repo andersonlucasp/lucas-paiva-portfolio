@@ -29,9 +29,9 @@ const allProjects = [
   {
     cls: 'proj-4',
     slug: 'taskall',
-    tag: 'Product Designer',
+    tag: 'Digital Product',
     title: 'From Working to Making Sense',
-    subtitle: '2026',
+    subtitle: 'taskALL',
   },
 ]
 

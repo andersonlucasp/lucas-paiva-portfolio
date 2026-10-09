@@ -189,55 +189,69 @@ export default function ProjectPage() {
             if (!s || (!s.content && !s.items?.length)) return null
             const title = s.title || def.title
             const question = s.question || def.question
-            return (
-              <div key={def.key}>
-                <div className="max-w-3xl">
-                  <p className="text-[11px] font-semibold tracking-widest uppercase text-white/20 mb-3">
-                    {String(i + 1).padStart(2, '0')}
-                  </p>
-                  <h3 className="text-[28px] font-bold tracking-tightest uppercase mb-2">
-                    {title}
-                  </h3>
-                  <p className="text-sm text-white/30 mb-8 leading-relaxed">
-                    {question}
-                  </p>
-                  <div className="text-base text-white/55 leading-[1.85] flex flex-col gap-5">
-                    {s.content && s.content.split('\n\n').map((p, j) => (
-                      <p key={j}>{p}</p>
-                    ))}
-                    {s.items && (
-                      <ul className="flex flex-col gap-4 mt-1">
-                        {s.items.map((item, j) => (
-                          <li key={j} className="flex gap-3">
-                            <span className="text-white/20 shrink-0 mt-[2px]">—</span>
-                            <span>
-                              {item.label && (
-                                <span className="text-white/80 font-semibold">{item.label}</span>
-                              )}
-                              {item.label && item.text && <span className="text-white/30"> — </span>}
-                              {item.text}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                    {s.outro && <p className="mt-1">{s.outro}</p>}
-                  </div>
+            const hasMedia = !!(s.image || s.images?.length)
+
+            const text = (
+              <>
+                <p className="text-[11px] font-semibold tracking-widest uppercase text-white/20 mb-3">
+                  {String(i + 1).padStart(2, '0')}
+                </p>
+                <h3 className="text-[28px] font-bold tracking-tightest uppercase mb-2">
+                  {title}
+                </h3>
+                <p className="text-sm text-white/30 mb-8 leading-relaxed">
+                  {question}
+                </p>
+                <div className="text-base text-white/55 leading-[1.85] flex flex-col gap-5">
+                  {s.content && s.content.split('\n\n').map((p, j) => (
+                    <p key={j}>{p}</p>
+                  ))}
+                  {s.items && (
+                    <ul className="flex flex-col gap-4 mt-1">
+                      {s.items.map((item, j) => (
+                        <li key={j} className="flex gap-3">
+                          <span className="text-white/20 shrink-0 mt-[2px]">—</span>
+                          <span>
+                            {item.label && (
+                              <span className="text-white/80 font-semibold">{item.label}</span>
+                            )}
+                            {item.label && item.text && <span className="text-white/30"> — </span>}
+                            {item.text}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {s.outro && <p className="mt-1">{s.outro}</p>}
                 </div>
-                {s.image && (
-                  <div className="mt-12 rounded-2xl overflow-hidden">
-                    <img src={s.image} alt="" className="w-full h-auto" />
-                  </div>
-                )}
-                {s.images && (
-                  <div className="mt-12 flex flex-col gap-4">
-                    {s.images.map((src, j) => (
-                      <div key={j} className="rounded-2xl overflow-hidden">
-                        <img src={src} alt="" className="w-full h-auto" />
-                      </div>
-                    ))}
-                  </div>
-                )}
+              </>
+            )
+
+            if (!hasMedia) {
+              return (
+                <div key={def.key} className="max-w-3xl">
+                  {text}
+                </div>
+              )
+            }
+
+            return (
+              <div key={def.key} className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
+                <div className="md:w-[40%] md:sticky md:top-24 shrink-0">
+                  {text}
+                </div>
+                <div className="md:w-[60%] flex flex-col gap-4">
+                  {s.image && (
+                    <div className="rounded-2xl overflow-hidden">
+                      <img src={s.image} alt="" className="w-full h-auto" />
+                    </div>
+                  )}
+                  {s.images && s.images.map((src, j) => (
+                    <div key={j} className="rounded-2xl overflow-hidden">
+                      <img src={src} alt="" className="w-full h-auto" />
+                    </div>
+                  ))}
+                </div>
               </div>
             )
           })}
@@ -251,11 +265,11 @@ export default function ProjectPage() {
         </p>
 
         {/* Main image */}
-        <div className="relative rounded-2xl overflow-hidden mb-3 md:mb-4 group" style={{ height: 'clamp(220px, 50vw, 480px)' }}>
+        <div className="relative rounded-2xl overflow-hidden mb-3 md:mb-4 group bg-bg-2" style={{ height: 'clamp(220px, 50vw, 480px)' }}>
           <img
             src={project.gallery[activeImg] || project.gallery[0]}
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
           <button
             onClick={() => setExpanded(true)}

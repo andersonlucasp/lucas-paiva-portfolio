@@ -240,17 +240,28 @@ export default function ProjectPage() {
                 <div className="md:w-[40%] md:sticky md:top-24 shrink-0">
                   {text}
                 </div>
-                <div className="md:w-[60%] flex flex-col gap-4">
+                <div className="md:w-[60%] flex flex-col gap-10">
                   {s.image && (
                     <div className="rounded-2xl overflow-hidden">
                       <img src={s.image} alt="" className="w-full h-auto" />
                     </div>
                   )}
-                  {s.images && s.images.map((src, j) => (
-                    <div key={j} className="rounded-2xl overflow-hidden">
-                      <img src={src} alt="" className="w-full h-auto" />
-                    </div>
-                  ))}
+                  {s.images && s.images.map((img, j) => {
+                    const src = typeof img === 'string' ? img : img.src
+                    const caption = typeof img === 'string' ? null : img.caption
+                    return (
+                      <div key={j} className="flex flex-col gap-3">
+                        {caption && (
+                          <p className="text-base font-semibold tracking-[0.15em] uppercase text-white">
+                            {caption}
+                          </p>
+                        )}
+                        <div className="rounded-2xl overflow-hidden">
+                          <img src={src} alt="" className="w-full h-auto" />
+                        </div>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             )

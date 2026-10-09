@@ -330,6 +330,9 @@ export const projects = [
         ],
         outro: 'Once that was approved, he asked me to apply it to the landing page.',
         image: '/img/taskall/cover.png',
+        images: [
+          '/img/taskall/design-system-tokens.png',
+        ],
       },
       descoberta: {
         title: 'Less Page, More Order',
@@ -344,12 +347,12 @@ export const projects = [
         ],
         outro: "Every platform page repeats the same skeleton: hero, overview, features, other platforms and the demo request. People choose their path from the menu instead of scrolling through everything.",
         images: [
-          '/img/taskall/antes-full.png',
-          '/img/taskall/home-hero.png',
-          '/img/taskall/escola-hero.png',
-          '/img/taskall/estudantes-hero.png',
-          '/img/taskall/familias-hero.png',
-          '/img/taskall/quem-somos-hero.png',
+          { caption: 'Before', src: '/img/taskall/antes-full.png' },
+          { caption: 'Home', src: '/img/taskall/home-full.png' },
+          { caption: 'School (Management)', src: '/img/taskall/escola-full.png' },
+          { caption: 'Students', src: '/img/taskall/estudantes-full.png' },
+          { caption: 'Families', src: '/img/taskall/familias-full.png' },
+          { caption: 'About Us', src: '/img/taskall/quem-somos-full.png' },
         ],
       },
       principios: {
